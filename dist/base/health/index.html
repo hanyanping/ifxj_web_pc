@@ -1,0 +1,1094 @@
+<!DOCTYPE html><html data-dpr="1" style="font-size: 54px;"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><link rel="stylesheet" type="text/css" href="/static/base.css"><script src="http://push.zhanzhang.baidu.com/push.js"></script><script src="/static/flexible.debug.js" type="text/javascript" charset="utf-8"></script><script src="/static/flexible_css.debug.js" type="text/javascript" charset="utf-8"></script><style>@charset "utf-8";html{color:#000;background:#fff;overflow-y:scroll;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}html *{outline:0;-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0)}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{margin:0;padding:0}input,select,textarea{font-size:100%}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}abbr,acronym{border:0;font-variant:normal}del{text-decoration:line-through}address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:500}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:500}q:before,q:after{content:''}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}a:hover{text-decoration:underline}ins,a{text-decoration:none}</style><meta name="keywords" content="分享家，深圳分享家，深圳分享家信息技术有限公司,人工智能、大数据、云计算"><meta name="description" content="深圳分享家科技信息有限公司是一家专注于人工智能、大数据、云计算等前沿技术研究的科技类公司，汇聚行业内的优秀人才，并结合自身行业经验的积累，整合医疗服务、健康管理、头条资讯、健康保险四大优势，为客户、合作伙伴提供全面的数字化健康服务。"><meta name="baidu-site-verification" content="cKO6rl4gho"><link href="/static/icon.png" rel="shortcut icon"><title>健康头条</title><style></style><link href="/static/css/app.2c096d40bf539286142cb6eed21cf530.css" rel="stylesheet"><style type="text/css">
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+    height: 100%;
+}
+
+/*# sourceURL=D:/han work/ifxj_web_pc/src/src/App.vue */
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkQ6L2hhbiB3b3JrL2lmeGpfd2ViX3BjL3NyYy9zcmMvQXBwLnZ1ZSJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBYUE7RUFDQSxvREFBQTtFQUNBLG9DQUFBO0VBQ0EsbUNBQUE7SUFDQSxhQUFBO0NBQ0EiLCJmaWxlIjoiQXBwLnZ1ZSIsInNvdXJjZXNDb250ZW50IjpbIjx0ZW1wbGF0ZT5cbiAgPGRpdiBpZD1cImFwcFwiPlxuICAgIDxyb3V0ZXItdmlldy8+XG4gIDwvZGl2PlxuPC90ZW1wbGF0ZT5cblxuPHNjcmlwdD5cbmV4cG9ydCBkZWZhdWx0IHtcbiAgbmFtZTogJ0FwcCdcbn1cbjwvc2NyaXB0PlxuXG48c3R5bGU+XG4jYXBwIHtcbiAgZm9udC1mYW1pbHk6ICdBdmVuaXInLCBIZWx2ZXRpY2EsIEFyaWFsLCBzYW5zLXNlcmlmO1xuICAtd2Via2l0LWZvbnQtc21vb3RoaW5nOiBhbnRpYWxpYXNlZDtcbiAgLW1vei1vc3gtZm9udC1zbW9vdGhpbmc6IGdyYXlzY2FsZTtcbiAgICBoZWlnaHQ6IDEwMCU7XG59XG48L3N0eWxlPlxuIl0sInNvdXJjZVJvb3QiOiIifQ== */</style><style type="text/css">/*************************pc specail start*************************/
+.healthServer {
+  width: 100%;
+  padding: 150px 10% 35px;
+}
+.healthServer .contentTitle {
+    text-align: center;
+}
+.healthServer .contentTitle .moblieTitle {
+      font-size: 48px;
+      color: #3d3d3d;
+}
+.healthServer .contentTitle .contentText {
+      color: #3d3d3d;
+      font-size: 12px;
+      padding-top: 13px;
+      padding-bottom: 40px;
+}
+.healthServer .textbox {
+    text-align: left;
+    /*-webkit-transition: all .1s ease-in .08s;*/
+    /*transition: all .1s ease-in .08s;*/
+    position: relative;
+    padding-bottom: 20px;
+    cursor: pointer;
+}
+.healthServer .textbox .backicon {
+      width: 100%;
+      height: 170px;
+      background-size: cover;
+}
+.healthServer .textbox .lable {
+      position: absolute;
+      top: 0;
+      height: 32px;
+      padding: 0 8px 0 0;
+      background-color: #0abf9b;
+      line-height: 32px;
+      text-align: center;
+}
+.healthServer .textbox .lable .fl {
+        padding-left: 5px;
+}
+.healthServer .textbox .lable .lableIcon img {
+        height: 18px;
+        width: 18px;
+}
+.healthServer .textbox .lable .lableText {
+        color: #fff;
+        font-size: 12px;
+        display: inline-block;
+        vertical-align: middle;
+}
+.healthServer .textbox .lead {
+      font-size: 14px;
+      padding: 20px 15px 0;
+      color: #3d3d3d;
+      font-weight: 600;
+      display: -webkit-box;
+      max-height: 60px;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+      margin-bottom: 0px;
+}
+.healthServer .textbox:hover {
+    cursor: pointer;
+    -webkit-box-shadow: 0px 2px 29px 0px rgba(57, 57, 57, 0.18);
+            box-shadow: 0px 2px 29px 0px rgba(57, 57, 57, 0.18);
+    /*<!--margin-top: -10px;-->*/
+    -webkit-transition: all .3s linear;
+    /*transition: all .3s ease-in .3s;*/
+    transition: all .3s linear;
+}
+.healthcontent {
+  width: 100%;
+  padding: 20px 10%;
+}
+.healthcontent .healthBox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.healthcontent .healthBox .healthVoice {
+      width: 78%;
+      margin-right: 30px;
+}
+.healthcontent .healthBox .healthVoice .title {
+        color: #3d3d3d;
+        font-size: 24px;
+        border-bottom: 3px solid #0abf9b;
+        padding-bottom: 15px;
+        font-weight: 600;
+}
+.healthcontent .healthBox .healthVoice .textbox:hover {
+        -webkit-box-shadow: 0px 2px 29px 0px rgba(57, 57, 57, 0.18);
+                box-shadow: 0px 2px 29px 0px rgba(57, 57, 57, 0.18);
+        -webkit-transition: all .3s linear;
+        /*transition: all .3s ease-in .3s;*/
+        transition: all .3s linear;
+}
+.healthcontent .healthBox .healthVoice .textbox {
+        cursor: pointer;
+        border: solid 1px #eeeeee;
+        margin-top: 30px;
+        width: 48%;
+        text-align: left;
+}
+.healthcontent .healthBox .healthVoice .textbox .lable {
+          padding: 10px 15px;
+          background-color: #fff;
+          line-height: 32px;
+          text-align: center;
+}
+.healthcontent .healthBox .healthVoice .textbox .lable .lableIcon img {
+            height: 18px;
+            width: 18px;
+}
+.healthcontent .healthBox .healthVoice .textbox .lable .lableText {
+            color: #0abf9b;
+            font-size: 12px;
+            display: inline-block;
+            vertical-align: middle;
+}
+.healthcontent .healthBox .healthVoice .textbox .lable .fr {
+            color: #929292;
+            font-size: 12px;
+}
+.healthcontent .healthBox .healthVoice .textbox .lead {
+          font-size: 18px;
+          font-weight: 600;
+          padding: 0px 15px 15px;
+          color: #3d3d3d;
+          height: 45px;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+          overflow: hidden;
+}
+.healthcontent .healthBox .healthVoice .textbox .backicon {
+          width: 100%;
+          height: 237px;
+          background-size: cover;
+}
+.healthcontent .healthBox .healthVoice .textbox .backicon img {
+            height: 100%;
+            width: 100%;
+}
+.healthcontent .healthBox .healthNews {
+      width: 33%;
+      background: #0abf9b;
+      margin-top: 46px;
+}
+.healthcontent .healthBox .healthNews .title {
+        padding: 18px 15px;
+        color: #fff;
+        font-size: 24px;
+        font-weight: 600;
+}
+.healthcontent .healthBox .healthNews .textbox {
+        text-align: left;
+        background: #fff;
+        margin: 0 15px 30px;
+        cursor: pointer;
+}
+.healthcontent .healthBox .healthNews .textbox .lable {
+          padding: 15px;
+          line-height: 32px;
+          text-align: center;
+}
+.healthcontent .healthBox .healthNews .textbox .lable .fr {
+            color: #929292;
+            font-size: 12px;
+}
+.healthcontent .healthBox .healthNews .textbox .lable .lableIcon img {
+            height: 18px;
+            width: 18px;
+}
+.healthcontent .healthBox .healthNews .textbox .lable .lableText {
+            color: #0abf9b;
+            font-size: 12px;
+            display: inline-block;
+            vertical-align: middle;
+}
+.healthcontent .healthBox .healthNews .textbox .lead {
+          font-size: 18px;
+          font-weight: 600;
+          padding: 0px 15px 15px;
+          color: #3d3d3d;
+          margin-bottom: 0;
+}
+.healthcontent .healthBox .healthNews .textbox .backicon {
+          width: 100%;
+          height: 175px;
+}
+.moreNews {
+  width: 100%;
+  padding: 30px 10% 30px;
+}
+.moreNews .moreNewstitle {
+    font-size: 24px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #0abf9b;
+    font-weight: 600;
+}
+.moreNews .healthnewsContent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 30px;
+    cursor: pointer;
+}
+.moreNews .healthnewsContent .newsLeft {
+      background-size: cover;
+      height: 200px;
+      width: 30%;
+      margin-right: 24px;
+      border: 1px solid #f2f2f2;
+}
+.moreNews .healthnewsContent .newsLeft .lable {
+        padding: 0 8px 0;
+        height: 32px;
+        background-color: #0abf9b;
+        line-height: 32px;
+        text-align: center;
+}
+.moreNews .healthnewsContent .newsLeft .lable .lableIcon img {
+          height: 18px;
+          width: 18px;
+}
+.moreNews .healthnewsContent .newsLeft .lable .lableText {
+          color: #fff;
+          font-size: 12px;
+          display: inline-block;
+          vertical-align: middle;
+}
+.moreNews .healthnewsContent .newsRight {
+      position: relative;
+      width: 55%;
+}
+.moreNews .healthnewsContent .newsRight .rightTop {
+        position: absolute;
+        top: 10px;
+}
+.moreNews .healthnewsContent .newsRight .rightTop .lead {
+          font-size: 18px;
+          font-weight: 600;
+}
+.moreNews .healthnewsContent .newsRight .rightTop .topTitle {
+          font-weight: 600;
+          color: #3d3d3d;
+          font-size: 18px;
+}
+.moreNews .healthnewsContent .newsRight .rightTop .topText {
+          font-size: 14px;
+          color: #929292;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 3;
+          overflow: hidden;
+}
+.moreNews .healthnewsContent .newsRight .newsTime {
+        position: absolute;
+        bottom: 5px;
+        color: #929292;
+        font-size: 12px;
+}
+.moreNews .moreData {
+    cursor: pointer;
+    text-align: center;
+    height: 40px;
+    width: 100px;
+    line-height: 40px;
+    color: #0abf9b;
+    margin: 50px auto 10px;
+    border: 2px solid #0abf9b;
+}
+.codeBox {
+  right: 2%;
+  margin-top: 56px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  bottom: 120px;
+}
+.codeBox .emailImg {
+    height: 59px;
+    width: 200px;
+    background: #0abf9b;
+    color: #232323;
+    position: absolute;
+    left: -210px;
+    line-height: 59px;
+    font-size: 14px;
+    text-align: center;
+}
+.codeBox .phoneImg {
+    height: 59px;
+    background: #0abf9b;
+    color: #232323;
+    width: 200px;
+    position: absolute;
+    left: -210px;
+    top: 68px;
+    line-height: 59px;
+    font-size: 14px;
+    text-align: center;
+}
+.codeBox .emailInfo {
+    background: #0abf9b;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 8px;
+    padding: 10px 17px;
+}
+.codeBox .emailInfo img {
+      height: 20px;
+      width: 20px;
+      margin-bottom: 2px;
+}
+.codeBox .emailInfo p {
+      margin-bottom: 0px;
+}
+.codeBox .emailInfo .shangfan {
+      height: 12px;
+      width: 15px;
+      cursor: pointer;
+}
+.codeBox .emailInfo:hover {
+    color: #0d0d0d;
+}
+.codeBox .none {
+    display: none;
+}
+.codeBox .active {
+    color: #0d0d0d;
+}
+@media screen and (min-width: 1920px) {
+.healthServer .textbox {
+    cursor: pointer;
+}
+.healthServer .textbox .backicon {
+      height: 380px;
+}
+.healthcontent .healthBox .healthVoice .textbox {
+    cursor: pointer;
+}
+.healthcontent .healthBox .healthVoice .textbox .lead {
+      font-weight: 600;
+}
+.healthcontent .healthBox .healthVoice .textbox .backicon {
+      height: 440px;
+      background-size: cover;
+}
+.healthcontent .healthBox .healthNews .textbox {
+    cursor: pointer;
+}
+.healthcontent .healthBox .healthNews .textbox .backicon {
+      height: 400px;
+      background-size: cover;
+}
+.moreNews .healthnewsContent {
+    cursor: pointer;
+}
+.moreNews .healthnewsContent .newsLeft {
+      height: 420px;
+      background-size: cover;
+      width: 35%;
+}
+}
+@media screen and (max-width: 1330px) {
+.healthServer .textbox {
+    cursor: pointer;
+    text-align: left;
+    -webkit-transition: all .1s ease-in .08s;
+    transition: all .1s ease-in .08s;
+}
+.healthServer .textbox .backicon {
+      width: 100%;
+      height: 180px;
+      background-size: cover;
+}
+.moreNews {
+    width: 100%;
+    padding: 20px 10% 50px;
+}
+.moreNews .moreNewstitle {
+      font-size: 18px;
+      padding-bottom: 15px;
+      border-bottom: 3px solid #0abf9b;
+}
+.moreNews .healthnewsContent {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      margin-top: 30px;
+      cursor: pointer;
+}
+.moreNews .healthnewsContent .newsLeft {
+        height: 180px;
+        width: 35%;
+        margin-right: 24px;
+}
+.moreNews .healthnewsContent .newsLeft .lable {
+          height: 32px;
+          padding: 0 8px  0;
+          background-color: #0abf9b;
+          line-height: 32px;
+          text-align: center;
+}
+.moreNews .healthnewsContent .newsLeft .lable .lableIcon img {
+            height: 18px;
+            width: 18px;
+}
+.moreNews .healthnewsContent .newsLeft .lable .lableText {
+            color: #fff;
+            font-size: 12px;
+            display: inline-block;
+            vertical-align: middle;
+}
+.moreNews .healthnewsContent .newsRight {
+        position: relative;
+        width: 55%;
+}
+.moreNews .healthnewsContent .newsRight .rightTop {
+          position: absolute;
+          top: 10px;
+}
+.moreNews .healthnewsContent .newsRight .rightTop .topTitle {
+            color: #3d3d3d;
+            font-size: 18px;
+            font-weight: 600;
+}
+.moreNews .healthnewsContent .newsRight .rightTop .topText {
+            font-size: 14px;
+            color: #929292;
+}
+.moreNews .healthnewsContent .newsRight .newsTime {
+          position: absolute;
+          bottom: 5px;
+          color: #929292;
+          font-size: 12px;
+}
+.moreNews .moreData {
+      cursor: pointer;
+      text-align: center;
+      height: 40px;
+      width: 100px;
+      line-height: 40px;
+      color: #0abf9b;
+      margin: 50px auto 10px;
+      border: 2px solid #0abf9b;
+}
+}
+/****************** pc specail end *********************************/
+/**************** mobile specail start ******************************/
+@media screen and (max-width: 768px) {
+.healthcontent {
+    width: 100%;
+    padding: 0px 15px;
+}
+.healthcontent .healthBox {
+      display: block;
+}
+.healthcontent .healthBox .healthVoice {
+        margin-right: 30px;
+        width: 100%;
+}
+.healthcontent .healthBox .healthVoice .title {
+          color: #3d3d3d;
+          font-size: 18px;
+          border-bottom: 3px solid #0abf9b;
+          padding-bottom: 15px;
+}
+.healthcontent .healthBox .healthVoice .textbox:hover {
+          /*box-shadow: 0px 2px 29px 0px rgba(57, 57, 57, 0.18);*/
+          /*-webkit-transition: all .28s ease-in .1s;*/
+          /*transition: all .28s ease-in .1s;*/
+}
+.healthcontent .healthBox .healthVoice .textbox {
+          /*box-shadow: 0px 2px 29px 0px rgba(57, 57, 57, 0.18);*/
+          margin-top: 15px;
+          min-height: 200px;
+          width: 100%;
+          text-align: left;
+          cursor: pointer;
+}
+.healthcontent .healthBox .healthVoice .textbox .lable {
+            padding: 5px 15px;
+            background-color: #fff;
+            line-height: 32px;
+            text-align: center;
+}
+.healthcontent .healthBox .healthVoice .textbox .lable .lableIcon img {
+              height: 16px;
+              width: 16px;
+}
+.healthcontent .healthBox .healthVoice .textbox .lable .lableText {
+              color: #0abf9b;
+              font-size: 12px;
+              display: inline-block;
+              vertical-align: middle;
+}
+.healthcontent .healthBox .healthVoice .textbox .lable .fr {
+              color: #929292;
+              font-size: 12px;
+}
+.healthcontent .healthBox .healthVoice .textbox .lead {
+            font-size: 14px;
+            padding: 0px 15px 15px;
+            color: #3d3d3d;
+            margin-bottom: 10px;
+            height: 35px;
+}
+.healthcontent .healthBox .healthVoice .textbox .backicon {
+            width: 100%;
+            height: 180px;
+            background-size: cover;
+}
+.healthcontent .healthBox .healthNews {
+        background: #0abf9b;
+        margin-top: 20px;
+        padding: 5px;
+        width: 100%;
+}
+.healthcontent .healthBox .healthNews .title {
+          padding: 15px;
+          color: #fff;
+          font-size: 18px;
+}
+.healthcontent .healthBox .healthNews .textbox {
+          text-align: left;
+          background: #fff;
+          margin: 0 15px 30px;
+          cursor: pointer;
+}
+.healthcontent .healthBox .healthNews .textbox .lable {
+            padding: 5px 15px;
+            line-height: 32px;
+            text-align: center;
+}
+.healthcontent .healthBox .healthNews .textbox .lable .fr {
+              color: #929292;
+              font-size: 12px;
+}
+.healthcontent .healthBox .healthNews .textbox .lable .lableIcon img {
+              height: 18px;
+              width: 18px;
+}
+.healthcontent .healthBox .healthNews .textbox .lable .lableText {
+              color: #0abf9b;
+              font-size: 12px;
+              display: inline-block;
+              vertical-align: middle;
+}
+.healthcontent .healthBox .healthNews .textbox .lead {
+            font-size: 14px;
+            padding: 0px 15px 15px;
+            color: #3d3d3d;
+            margin-bottom: 0;
+}
+.healthcontent .healthBox .healthNews .textbox .backicon {
+            width: 100%;
+            height: 175px;
+}
+.healthServer {
+    padding: 110px 15px 30px;
+}
+.healthServer .contentTitle .moblieTitle {
+      font-size: 22px;
+      font-weight: 600;
+}
+.healthServer .textbox {
+      min-height: 300px;
+      width: 48%;
+      text-align: left;
+      -webkit-transition: all .1s ease-in .08s;
+      transition: all .1s ease-in .08s;
+      padding-bottom: 10px;
+      cursor: pointer;
+}
+.healthServer .textbox .lable {
+        position: absolute;
+        top: 0;
+        padding: 0 8px 0 0;
+        height: 32px;
+        background-color: #0abf9b;
+        line-height: 32px;
+        text-align: center;
+}
+.healthServer .textbox .lable .fl {
+          padding-left: 5px;
+}
+.healthServer .textbox .lable .lableIcon img {
+          height: 16px;
+          width: 16px;
+}
+.healthServer .textbox .lable .lableText {
+          color: #fff;
+          font-size: 14px;
+          display: inline-block;
+          vertical-align: middle;
+}
+.healthServer .textbox .lead {
+        font-size: 14px;
+        /*padding: 20px 5px;*/
+        color: #3d3d3d;
+        margin-bottom: 0;
+}
+.healthServer .textbox .backicon {
+        width: 100%;
+        height: 170px;
+        background-size: cover;
+}
+.moreNews {
+    width: 100%;
+    padding: 25px 10%;
+}
+.moreNews .moreNewstitle {
+      font-size: 18px;
+      padding-bottom: 15px;
+      border-bottom: 3px solid #0abf9b;
+}
+.moreNews .healthnewsContent {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      margin-top: 15px;
+      cursor: pointer;
+}
+.moreNews .healthnewsContent .newsLeft {
+        height: 180px;
+        width: 30%;
+        margin-right: 24px;
+}
+.moreNews .healthnewsContent .newsLeft .lable {
+          padding: 0 8px 0;
+          height: 32px;
+          background-color: #0abf9b;
+          line-height: 32px;
+          text-align: center;
+}
+.moreNews .healthnewsContent .newsLeft .lable .lableIcon img {
+            height: 16px;
+            width: 16px;
+}
+.moreNews .healthnewsContent .newsLeft .lable .lableText {
+            color: #fff;
+            font-size: 12px;
+            display: inline-block;
+            vertical-align: middle;
+}
+.moreNews .healthnewsContent .newsRightmobile .rightTop {
+        padding-top: 15px;
+}
+.moreNews .healthnewsContent .newsRightmobile .rightTop .lead {
+          margin-bottom: 15px;
+          font-weight: 600;
+}
+.moreNews .healthnewsContent .newsRightmobile .rightTop .topTitle {
+          color: #3d3d3d;
+          font-weight: 600;
+          font-size: 18px;
+}
+.moreNews .healthnewsContent .newsRightmobile .rightTop .topText {
+          font-size: 14px;
+          color: #929292;
+}
+.moreNews .healthnewsContent .newsRightmobile .newsTime {
+        bottom: 5px;
+        color: #929292;
+        font-size: 12px;
+}
+.moreNews .moreData {
+      cursor: pointer;
+      text-align: center;
+      height: 40px;
+      width: 100px;
+      line-height: 40px;
+      color: #0abf9b;
+      margin: 30px auto 10px;
+      border: 1px solid #0abf9b;
+}
+}
+@media screen and (max-width: 767px) {
+.healthServer {
+    padding: 30px 15px 15px;
+}
+.healthServer .contentTitle .moblieTitle {
+      font-size: 22px;
+      font-weight: 600;
+}
+.healthServer .textbox {
+      min-height: 150px;
+      width: 48%;
+      text-align: left;
+      -webkit-transition: all .1s ease-in .08s;
+      transition: all .1s ease-in .08s;
+      cursor: pointer;
+}
+.healthServer .textbox .lable {
+        position: absolute;
+        top: 0;
+        padding: 0 8px 0 0;
+        height: 32px;
+        background-color: #0abf9b;
+        line-height: 32px;
+        text-align: center;
+}
+.healthServer .textbox .lable .fl {
+          padding-left: 5px;
+}
+.healthServer .textbox .lable .lableIcon img {
+          height: 16px;
+          width: 16px;
+}
+.healthServer .textbox .lable .lableText {
+          color: #fff;
+          font-size: 12px;
+          display: inline-block;
+          vertical-align: middle;
+}
+.healthServer .textbox .lead {
+        font-size: 12px;
+        /*padding: 20px 5px;*/
+        color: #3d3d3d;
+        margin-bottom: 0;
+}
+.healthServer .textbox .backicon {
+        width: 100%;
+        height: 100px;
+        background-size: cover;
+}
+.moreNews {
+    width: 100%;
+    padding: 25px 15px;
+}
+.moreNews .moreNewstitle {
+      font-size: 16px;
+      padding-bottom: 15px;
+      border-bottom: 3px solid #0abf9b;
+}
+.moreNews .healthnewsContent {
+      display: block;
+      margin-top: 30px;
+      cursor: pointer;
+}
+.moreNews .healthnewsContent .newsLeft {
+        height: 180px;
+        width: 100%;
+        margin-right: 15px;
+}
+.moreNews .healthnewsContent .newsLeft .lable {
+          height: 32px;
+          padding: 0 8px 0;
+          background-color: #0abf9b;
+          line-height: 32px;
+          text-align: center;
+}
+.moreNews .healthnewsContent .newsLeft .lable .lableIcon img {
+            height: 16px;
+            width: 16px;
+}
+.moreNews .healthnewsContent .newsLeft .lable .lableText {
+            color: #fff;
+            font-size: 12px;
+            display: inline-block;
+            vertical-align: middle;
+}
+.moreNews .healthnewsContent .newsRightmobile .rightTop .topTitle {
+        color: #3d3d3d;
+        font-weight: 600;
+        font-size: 16px;
+        padding: 15px 0 0px;
+}
+.moreNews .healthnewsContent .newsRightmobile .rightTop .topText {
+        font-size: 12px;
+        color: #929292;
+        padding-top: 5px;
+}
+.moreNews .healthnewsContent .newsRightmobile .rightTop .newsTime {
+        color: #929292;
+        font-size: 12px;
+}
+}
+/**************** mobile specail end *****************************/
+
+/*# sourceURL=D:/han work/ifxj_web_pc/src/views/D:/han work/ifxj_web_pc/src/views/health.vue */
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkQ6L2hhbiB3b3JrL2lmeGpfd2ViX3BjL3NyYy92aWV3cy9EOi9oYW4gd29yay9pZnhqX3dlYl9wYy9zcmMvdmlld3MvaGVhbHRoLnZ1ZSJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFDQSxvRUFBb0U7QUFDcEU7RUFDSSxZQUFXO0VBQ1gsd0JBQXVCO0NBdUUxQjtBQXpFRDtJQUlRLG1CQUFrQjtDQVdyQjtBQWZMO01BTVksZ0JBQWU7TUFDZixlQUFjO0NBQ2pCO0FBUlQ7TUFVWSxlQUFjO01BQ2QsZ0JBQWU7TUFDZixrQkFBaUI7TUFDakIscUJBQW9CO0NBQ3ZCO0FBZFQ7SUFpQlEsaUJBQWdCO0lBQ2hCLDZDQUE2QztJQUM3QyxxQ0FBcUM7SUFDckMsbUJBQWtCO0lBQ2xCLHFCQUFvQjtJQUNwQixnQkFBZTtDQTBDbEI7QUFoRUw7TUF3QlksWUFBVztNQUNYLGNBQWE7TUFDYix1QkFBc0I7Q0FDekI7QUEzQlQ7TUE2QlcsbUJBQWtCO01BQ2pCLE9BQU07TUFDTixhQUFZO01BQ1osbUJBQWtCO01BQ2xCLDBCQUF5QjtNQUN6QixrQkFBaUI7TUFDakIsbUJBQWtCO0NBZ0JyQjtBQW5EVDtRQXFDZ0Isa0JBQWlCO0NBQ3BCO0FBdENiO1FBeUNtQixhQUFZO1FBQ1osWUFBVztDQUNkO0FBM0NoQjtRQThDZ0IsWUFBVztRQUNYLGdCQUFlO1FBQ2Ysc0JBQXFCO1FBQ3JCLHVCQUFzQjtDQUN6QjtBQWxEYjtNQXFEWSxnQkFBZTtNQUNmLHFCQUFvQjtNQUNwQixlQUFjO01BQ2QsaUJBQWdCO01BQ2hCLHFCQUFvQjtNQUNwQixpQkFBZ0I7TUFDaEIsNkJBQTRCO01BQzVCLHNCQUFxQjtNQUNyQixpQkFBZ0I7TUFDaEIsbUJBQWtCO0NBQ3JCO0FBL0RUO0lBa0VRLGdCQUFlO0lBQ2YsNERBQW1EO1lBQW5ELG9EQUFtRDtJQUNuRCw2QkFBNkI7SUFDN0IsbUNBQWlDO0lBQ2pDLG9DQUFvQztJQUNwQywyQkFBMEI7Q0FDN0I7QUFFTDtFQUNJLFlBQVc7RUFDWCxr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ZCxpQkFBZTtDQUNsQjtBQTVDVDtRQThDWSxZQUFVO1FBQ1YsY0FBYTtRQUNiLHVCQUFzQjtDQUN6QjtBQUlUO0lBQ0ksWUFBVztJQUNYLG1CQUFrQjtDQXNEckI7QUF4REQ7TUFJUSxnQkFBZTtNQUNmLHFCQUFvQjtNQUNwQixpQ0FDSjtDQUFDO0FBUEw7TUFTUSxlQUFhO01BQ2IsaUJBQWdCO01BQ2hCLGdCQUFlO0NBNENsQjtBQXZETDtRQWFZLGNBQWE7UUFDYixZQUFXO1FBQ1gsbUJBQWtCO0NBb0JyQjtBQW5DVDtVQWlCZ0IsYUFBWTtVQUNaLGlCQUFnQjtVQUNoQiwwQkFBeUI7VUFDekIsa0JBQWlCO1VBQ2pCLG1CQUFrQjtDQWFyQjtBQWxDYjtZQXdCdUIsYUFBWTtZQUNaLFlBQVc7Q0FDZDtBQTFCcEI7WUE2Qm9CLFlBQVc7WUFDWCxnQkFBZTtZQUNmLHNCQUFxQjtZQUNyQix1QkFBc0I7Q0FDekI7QUFqQ2pCO1FBdUNvQixlQUFjO1FBQ2QsaUJBQWdCO1FBQ2hCLGdCQUFlO1FBQ2Ysb0JBQW1CO0NBQ3RCO0FBM0NqQjtRQTZDb0IsZ0JBQWU7UUFDZixlQUFjO1FBQ2QsaUJBQWdCO0NBQ25CO0FBaERqQjtRQWtEb0IsZUFBYztRQUNkLGdCQUFlO0NBQ2xCO0NBQUE7QUFNckIsbUVBQW1FIiwiZmlsZSI6ImhlYWx0aC52dWUiLCJzb3VyY2VzQ29udGVudCI6WyJcbi8qKioqKioqKioqKioqKioqKioqKioqKioqcGMgc3BlY2FpbCBzdGFydCoqKioqKioqKioqKioqKioqKioqKioqKiovXG4uaGVhbHRoU2VydmVye1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIHBhZGRpbmc6IDE1MHB4IDEwJSAzNXB4O1xuICAgIC5jb250ZW50VGl0bGV7XG4gICAgICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgICAgICAgLm1vYmxpZVRpdGxle1xuICAgICAgICAgICAgZm9udC1zaXplOiA0OHB4O1xuICAgICAgICAgICAgY29sb3I6ICMzZDNkM2Q7XG4gICAgICAgIH1cbiAgICAgICAgLmNvbnRlbnRUZXh0e1xuICAgICAgICAgICAgY29sb3I6ICMzZDNkM2Q7XG4gICAgICAgICAgICBmb250LXNpemU6IDEycHg7XG4gICAgICAgICAgICBwYWRkaW5nLXRvcDogMTNweDtcbiAgICAgICAgICAgIHBhZGRpbmctYm90dG9tOiA0MHB4O1xuICAgICAgICB9XG4gICAgfVxuICAgIC50ZXh0Ym94e1xuICAgICAgICB0ZXh0LWFsaWduOiBsZWZ0O1xuICAgICAgICAvKi13ZWJraXQtdHJhbnNpdGlvbjogYWxsIC4xcyBlYXNlLWluIC4wOHM7Ki9cbiAgICAgICAgLyp0cmFuc2l0aW9uOiBhbGwgLjFzIGVhc2UtaW4gLjA4czsqL1xuICAgICAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgICAgIHBhZGRpbmctYm90dG9tOiAyMHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIC5iYWNraWNvbntcbiAgICAgICAgICAgIHdpZHRoOiAxMDAlO1xuICAgICAgICAgICAgaGVpZ2h0OiAxNzBweDtcbiAgICAgICAgICAgIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XG4gICAgICAgIH1cbiAgICAgICAgLmxhYmxle1xuICAgICAgICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICAgICAgICB0b3A6IDA7XG4gICAgICAgICAgICBoZWlnaHQ6IDMycHg7XG4gICAgICAgICAgICBwYWRkaW5nOiAwIDhweCAwIDA7XG4gICAgICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjMGFiZjliO1xuICAgICAgICAgICAgbGluZS1oZWlnaHQ6IDMycHg7XG4gICAgICAgICAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgICAgICAgICAuZmx7XG4gICAgICAgICAgICAgICAgcGFkZGluZy1sZWZ0OiA1cHg7XG4gICAgICAgICAgICB9XG4gICAgICAgICAgICAubGFibGVJY29ue1xuICAgICAgICAgICAgICAgaW1ne1xuICAgICAgICAgICAgICAgICAgIGhlaWdodDogMThweDtcbiAgICAgICAgICAgICAgICAgICB3aWR0aDogMThweDtcbiAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgIH1cbiAgICAgICAgICAgIC5sYWJsZVRleHR7XG4gICAgICAgICAgICAgICAgY29sb3I6ICNmZmY7XG4gICAgICAgICAgICAgICAgZm9udC1zaXplOiAxMnB4O1xuICAgICAgICAgICAgICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbiAgICAgICAgICAgICAgICB2ZXJ0aWNhbC1hbGlnbjogbWlkZGxlO1xuICAgICAgICAgICAgfVxuICAgICAgICB9XG4gICAgICAgIC5sZWFke1xuICAgICAgICAgICAgZm9udC1zaXplOiAxNHB4O1xuICAgICAgICAgICAgcGFkZGluZzogMjBweCAxNXB4IDA7XG4gICAgICAgICAgICBjb2xvcjogIzNkM2QzZDtcbiAgICAgICAgICAgIGZvbnQtd2VpZ2h0OiA2MDA7XG4gICAgICAgICAgICBkaXNwbGF5OiAtd2Via2l0LWJveDtcbiAgICAgICAgICAgIG1heC1oZWlnaHQ6IDYwcHg7XG4gICAgICAgICAgICAtd2Via2l0LWJveC1vcmllbnQ6IHZlcnRpY2FsO1xuICAgICAgICAgICAgLXdlYmtpdC1saW5lLWNsYW1wOiAyO1xuICAgICAgICAgICAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgICAgICAgICAgIG1hcmdpbi1ib3R0b206IDBweDtcbiAgICAgICAgfVxuICAgIH1cbiAgICAudGV4dGJveDpob3ZlcntcbiAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgICAgICBib3gtc2hhZG93OiAwcHggMnB4IDI5cHggMHB4IHJnYmEoNTcsIDU3LCA1NywgMC4xOCk7XG4gICAgICAgIC8qPCEtLW1hcmdpbi10b3A6IC0xMHB4Oy0tPiovXG4gICAgICAgIC13ZWJraXQtdHJhbnNpdGlvbjphbGwgLjNzIGxpbmVhcjtcbiAgICAgICAgLyp0cmFuc2l0aW9uOiBhbGwgLjNzIGVhc2UtaW4gLjNzOyovXG4gICAgICAgIHRyYW5zaXRpb246IGFsbCAuM3MgbGluZWFyO1xuICAgIH1cbn1cbi5oZWFsdGhjb250ZW50e1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIHBhZGRpbmc6IDIwcHggMTAlO1xuICAgIC5oZWFsdGhCb3h7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIC5oZWFsdGhWb2ljZXtcbiAgICAgICAgICAgIHdpZHRoOiA3OCU7XG4gICAgICAgICAgICBtYXJnaW4tcmlnaHQ6IDMwcHg7XG4gICAgICAgICAgICAudGl0bGV7XG4gICAgICAgICAgICAgICAgY29sb3I6ICMzZDNkM2Q7XG4gICAgICAgICAgICAgICAgZm9udC1zaXplOiAyNHB4O1xuICAgICAgICAgICAgICAgIGJvcmRlci1ib3R0b206IDNweCBzb2xpZCAjMGFiZjliO1xuICAgICAgICAgICAgICAgIHBhZGRpbmctYm90dG9tOiAxNXB4O1xuICAgICAgICAgICAgICAgIGZvbnQtd2VpZ2h0OiA2MDA7XG4gICAgICAgICAgICB9XG4gICAgICAgICAgICAudGV4dGJveDpob3ZlcntcbiAgICAgICAgICAgICAgICBib3gtc2hhZG93OiAwcHggMnB4IDI5cHggMHB4IHJnYmEoNTcsIDU3LCA1NywgMC4xOCk7XG4gICAgICAgICAgICAgICAgLXdlYmtpdC10cmFuc2l0aW9uOmFsbCAuM3MgbGluZWFyO1xuICAgICAgICAgICAgICAgIC8qdHJhbnNpdGlvbjogYWxsIC4zcyBlYXNlLWluIC4zczsqL1xuICAgICAgICAgICAgICAgIHRyYW5zaXRpb246IGFsbCAuM3MgbGluZWFyO1xuICAgICAgICAgICAgfVxuICAgICAgICAgICAgLnRleHRib3gge1xuICAgICAgICAgICAgICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICAgICAgICAgICAgICBib3JkZXI6IHNvbGlkIDFweCAjZWVlZWVlO1xuICAgICAgICAgICAgICAgIG1hcmdpbi10b3A6IDMwcHg7XG4gICAgICAgICAgICAgICAgd2lkdGg6IDQ4JTtcbiAgICAgICAgICAgICAgICB0ZXh0LWFsaWduOiBsZWZ0O1xuICAgICAgICAgICAgICAgIC5sYWJsZXtcbiAgICAgICAgICAgICAgICAgICAgcGFkZGluZzogMTBweCAxNXB4O1xuICAgICAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmO1xuICAgICAgICAgICAgICAgICAgICBsaW5lLWhlaWdodDogMzJweDtcbiAgICAgICAgICAgICAgICAgICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgICAgICAgICAgICAgICAgICAubGFibGVJY29ue1xuICAgICAgICAgICAgICAgICAgICAgICBpbWd7XG4gICAgICAgICAgICAgICAgICAgICAgICAgICBoZWlnaHQ6IDE4cHg7XG4gICAgICAgICAgICAgICAgICAgICAgICAgICB3aWR0aDogMThweDtcbiAgICAgICAgICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICAgICAgICAgIC5sYWJsZVRleHR7XG4gICAgICAgICAgICAgICAgICAgICAgICBjb2xvcjogIzBhYmY5YjtcbiAgICAgICAgICAgICAgICAgICAgICAgIGZvbnQtc2l6ZTogMTJweDtcbiAgICAgICAgICAgICAgICAgICAgICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbiAgICAgICAgICAgICAgICAgICAgICAgIHZlcnRpY2FsLWFsaWduOiBtaWRkbGU7XG4gICAgICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgICAgICAgICAgLmZye1xuICAgICAgICAgICAgICAgICAgICAgICAgY29sb3I6IzkyOTI5MjtcbiAgICAgICAgICAgICAgICAgICAgICAgIGZvbnQtc2l6ZTogMTJweDtcbiAgICAgICAgICAgICAgICAgICAgfVxuXG4gICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgICAgIC5sZWFke1xuICAgICAgICAgICAgICAgICAgICBmb250LXNpemU6IDE4cHg7XG4gICAgICAgICAgICAgICAgICAgIGZvbnQtd2VpZ2h0OiA2MDA7XG4gICAgICAgICAgICAgICAgICAgIHBhZGRpbmc6IDBweCAxNXB4IDE1cHg7XG4gICAgICAgICAgICAgICAgICAgIGNvbG9yOiAjM2QzZDNkO1xuICAgICAgICAgICAgICAgICAgICBoZWlnaHQ6IDQ1cHg7XG4gICAgICAgICAgICAgICAgICAgIGRpc3BsYXk6IC13ZWJraXQtYm94O1xuICAgICAgICAgICAgICAgICAgICAtd2Via2l0LWJveC1vcmllbnQ6IHZlcnRpY2FsO1xuICAgICAgICAgICAgICAgICAgICAtd2Via2l0LWxpbmUtY2xhbXA6IDI7XG4gICAgICAgICAgICAgICAgICAgIG92ZXJmbG93OiBoaWRkZW47XG4gICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgICAgIC5iYWNraWNvbiB7XG4gICAgICAgICAgICAgICAgICAgIHdpZHRoOjEwMCU7XG4gICAgICAgICAgICAgICAgICAgIGhlaWdodDogMjM3cHg7XG4gICAgICAgICAgICAgICAgICAgIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XG4gICAgICAgICAgICAgICAgICAgIGltZyB7XG4gICAgICAgICAgICAgICAgICAgICAgICBoZWlnaHQ6IDEwMCU7XG4gICAgICAgICAgICAgICAgICAgICAgICB3aWR0aDogMTAwJTtcbiAgICAgICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgIH1cbiAgICAgICAgfVxuICAgICAgICAuaGVhbHRoTmV3c3tcbiAgICAgICAgICAgIHdpZHRoOiAzMyU7XG4gICAgICAgICAgICBiYWNrZ3JvdW5kOiAjMGFiZjliO1xuICAgICAgICAgICAgbWFyZ2luLXRvcDogNDZweDtcbiAgICAgICAgICAgIC50aXRsZXtcbiAgICAgICAgICAgICAgICBwYWRkaW5nOiAxOHB4IDE1cHg7XG4gICAgICAgICAgICAgICAgY29sb3I6ICNmZmY7XG4gICAgICAgICAgICAgICAgZm9udC1zaXplOiAyNHB4O1xuICAgICAgICAgICAgICAgIGZvbnQtd2VpZ2h0OiA2MDA7XG4gICAgICAgICAgICB9XG4gICAgICAgICAgICAudGV4dGJveCB7XG4gICAgICAgICAgICAgICAgdGV4dC1hbGlnbjogbGVmdDtcbiAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kOiAjZmZmO1xuICAgICAgICAgICAgICAgIG1hcmdpbjogMCAxNXB4IDMwcHg7XG4gICAgICAgICAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgICAgICAgICAgICAgIC5sYWJsZXtcbiAgICAgICAgICAgICAgICAgICAgcGFkZGluZzogMTVweDtcbiAgICAgICAgICAgICAgICAgICAgbGluZS1oZWlnaHQ6IDMycHg7XG4gICAgICAgICAgICAgICAgICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgICAgICAgICAgICAgICAgICAgLmZye1xuICAgICAgICAgICAgICAgICAgICAgICAgY29sb3I6IzkyOTI5MjtcbiAgICAgICAgICAgICAgICAgICAgICAgIGZvbnQtc2l6ZTogMTJweDtcbiAgICAgICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgICAgICAgICAubGFibGVJY29ue1xuICAgICAgICAgICAgICAgICAgICAgICAgaW1ne1xuICAgICAgICAgICAgICAgICAgICAgICAgICAgIGhlaWdodDogMThweDtcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICB3aWR0aDogMThweDtcbiAgICAgICAgICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgICAgICAgICAubGFibGVUZXh0e1xuICAgICAgICAgICAgICAgICAgICAgICAgY29sb3I6ICMwYWJmOWI7XG4gICAgICAgICAgICAgICAgICAgICAgICBmb250LXNpemU6IDEycHg7XG4gICAgICAgICAgICAgICAgICAgICAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gICAgICAgICAgICAgICAgICAgICAgICB2ZXJ0aWNhbC1hbGlnbjogbWlkZGxlO1xuICAgICAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgICAgIC5sZWFke1xuICAgICAgICAgICAgICAgICAgICBmb250LXNpemU6IDE4cHg7XG4gICAgICAgICAgICAgICAgICAgIGZvbnQtd2VpZ2h0OiA2MDA7XG4gICAgICAgICAgICAgICAgICAgIHBhZGRpbmc6IDBweCAxNXB4IDE1cHg7XG4gICAgICAgICAgICAgICAgICAgIGNvbG9yOiAjM2QzZDNkO1xuICAgICAgICAgICAgICAgICAgICBtYXJnaW4tYm90dG9tOjA7XG4gICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgICAgIC5iYWNraWNvbiB7XG4gICAgICAgICAgICAgICAgICAgIHdpZHRoOjEwMCU7XG4gICAgICAgICAgICAgICAgICAgIGhlaWdodDogMTc1cHg7XG4gICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgfVxuXG4gICAgICAgIH1cbiAgICB9XG59XG4ubW9yZU5ld3N7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgcGFkZGluZzogMzBweCAxMCUgMzBweDtcbiAgICAubW9yZU5ld3N0aXRsZXtcbiAgICAgICAgZm9udC1zaXplOiAyNHB4O1xuICAgICAgICBwYWRkaW5nLWJvdHRvbTogMTVweDtcbiAgICAgICAgYm9yZGVyLWJvdHRvbTogM3B4IHNvbGlkICMwYWJmOWI7XG4gICAgICAgIGZvbnQtd2VpZ2h0OiA2MDA7XG4gICAgfVxuICAgIC5oZWFsdGhuZXdzQ29udGVudHtcbiAgICAgICAgZGlzcGxheTpmbGV4O1xuICAgICAgICBtYXJnaW4tdG9wOiAzMHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIC5uZXdzTGVmdHtcbiAgICAgICAgICAgIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XG4gICAgICAgICAgICBoZWlnaHQ6IDIwMHB4O1xuICAgICAgICAgICAgd2lkdGg6IDMwJTtcbiAgICAgICAgICAgIG1hcmdpbi1yaWdodDogMjRweDtcbiAgICAgICAgICAgIGJvcmRlcjogMXB4IHNvbGlkICNmMmYyZjI7XG4gICAgICAgICAgICAubGFibGV7XG4gICAgICAgICAgICAgICAgcGFkZGluZzogMCA4cHggMDtcbiAgICAgICAgICAgICAgICBoZWlnaHQ6IDMycHg7XG4gICAgICAgICAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogIzBhYmY5YjtcbiAgICAgICAgICAgICAgICBsaW5lLWhlaWdodDogMzJweDtcbiAgICAgICAgICAgICAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgICAgICAgICAgICAgLmxhYmxlSWNvbntcbiAgICAgICAgICAgICAgICAgICAgaW1ne1xuICAgICAgICAgICAgICAgICAgICAgICAgaGVpZ2h0OiAxOHB4O1xuICAgICAgICAgICAgICAgICAgICAgICAgd2lkdGg6IDE4cHg7XG4gICAgICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICAgICAgLmxhYmxlVGV4dHtcbiAgICAgICAgICAgICAgICAgICAgY29sb3I6ICNmZmY7XG4gICAgICAgICAgICAgICAgICAgIGZvbnQtc2l6ZTogMTJweDtcbiAgICAgICAgICAgICAgICAgICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICAgICAgICAgICAgICAgICAgICB2ZXJ0aWNhbC1hbGlnbjogbWlkZGxlO1xuICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgIH1cbiAgICAgICAgfVxuICAgICAgICAubmV3c1JpZ2h0e1xuICAgICAgICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgICAgICAgd2lkdGg6IDU1JTtcblxuICAgICAgICAgICAgLnJpZ2h0VG9we1xuICAgICAgICAgICAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgICAgICAgICAgICB0b3A6IDEwcHg7XG4gICAgICAgICAgICAgICAgLmxlYWR7XG4gICAgICAgICAgICAgICAgICAgIGZvbnQtc2l6ZTogMThweDtcbiAgICAgICAgICAgICAgICAgICAgZm9udC13ZWlnaHQ6IDYwMDtcbiAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICAgICAgLnRvcFRpdGxle1xuICAgICAgICAgICAgICAgICAgICBmb250LXdlaWdodDogNjAwO1xuICAgICAgICAgICAgICAgICAgICBjb2xvcjogIzNkM2QzZDtcbiAgICAgICAgICAgICAgICAgICAgZm9udC1zaXplOiAxOHB4O1xuICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgICAgICAudG9wVGV4dHtcbiAgICAgICAgICAgICAgICAgICAgZm9udC1zaXplOiAxNHB4O1xuICAgICAgICAgICAgICAgICAgICBjb2xvcjogIzkyOTI5MjtcbiAgICAgICAgICAgICAgICAgICAgZGlzcGxheTogLXdlYmtpdC1ib3g7XG4gICAgICAgICAgICAgICAgICAgIC13ZWJraXQtYm94LW9yaWVudDogdmVydGljYWw7XG4gICAgICAgICAgICAgICAgICAgIC13ZWJraXQtbGluZS1jbGFtcDogMztcbiAgICAgICAgICAgICAgICAgICAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICB9XG4gICAgICAgICAgICAubmV3c1RpbWV7XG4gICAgICAgICAgICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgICAgICAgICAgIGJvdHRvbTogNXB4O1xuICAgICAgICAgICAgICAgIGNvbG9yOiAjOTI5MjkyO1xuICAgICAgICAgICAgICAgIGZvbnQtc2l6ZTogMTJweDtcbiAgICAgICAgICAgIH1cbiAgICAgICAgfVxuICAgIH1cbiAgICAubW9yZURhdGF7XG4gICAgICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICAgICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgICAgICBoZWlnaHQ6IDQwcHg7XG4gICAgICAgIHdpZHRoOiAxMDBweDtcbiAgICAgICAgbGluZS1oZWlnaHQ6IDQwcHg7XG4gICAgICAgIGNvbG9yOiAjMGFiZjliO1xuICAgICAgICBtYXJnaW46IDUwcHggYXV0byAxMHB4O1xuICAgICAgICBib3JkZXI6IDJweCBzb2xpZCAjMGFiZjliO1xuICAgIH1cbn1cbi5jb2RlQm94e1xuICAgIHJpZ2h0OiAyJTtcbiAgICBtYXJnaW4tdG9wOiA1NnB4O1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgcG9zaXRpb246IGZpeGVkO1xuICAgIGJvdHRvbTogMTIwcHg7XG4gICAgLmVtYWlsSW1ne1xuICAgICAgICBoZWlnaHQ6IDU5cHg7XG4gICAgICAgIHdpZHRoOiAyMDBweDtcbiAgICAgICAgYmFja2dyb3VuZDogIzBhYmY5YjtcbiAgICAgICAgY29sb3I6ICMyMzIzMjM7XG4gICAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgICAgbGVmdDogLTIxMHB4O1xuICAgICAgICBsaW5lLWhlaWdodDogNTlweDtcbiAgICAgICAgZm9udC1zaXplOiAxNHB4O1xuICAgICAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgfVxuICAgIC5waG9uZUltZ3tcbiAgICAgICAgaGVpZ2h0OiA1OXB4O1xuICAgICAgICBiYWNrZ3JvdW5kOiAjMGFiZjliO1xuICAgICAgICBjb2xvcjogIzIzMjMyMztcbiAgICAgICAgd2lkdGg6IDIwMHB4O1xuICAgICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICAgIGxlZnQ6IC0yMTBweDtcbiAgICAgICAgdG9wOiA2OHB4O1xuICAgICAgICBsaW5lLWhlaWdodDogNTlweDtcbiAgICAgICAgZm9udC1zaXplOiAxNHB4O1xuICAgICAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgfVxuICAgIC5lbWFpbEluZm97XG4gICAgICAgIGJhY2tncm91bmQ6ICMwYWJmOWI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTJweDtcbiAgICAgICAgY29sb3I6ICNmZmY7XG4gICAgICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgICAgICBtYXJnaW4tYm90dG9tOiA4cHg7XG4gICAgICAgIHBhZGRpbmc6IDEwcHggMTdweDtcbiAgICAgICAgaW1ne1xuICAgICAgICAgICAgaGVpZ2h0OiAyMHB4O1xuICAgICAgICAgICAgd2lkdGg6IDIwcHg7XG4gICAgICAgICAgICBtYXJnaW4tYm90dG9tOiAycHg7XG4gICAgICAgIH1cbiAgICAgICAgcHtcbiAgICAgICAgICAgIG1hcmdpbi1ib3R0b206IDBweDtcbiAgICAgICAgfVxuICAgICAgICAuc2hhbmdmYW57XG4gICAgICAgICAgICBoZWlnaHQ6IDEycHg7XG4gICAgICAgICAgICB3aWR0aDogMTVweDtcbiAgICAgICAgICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICAgICAgfVxuICAgIH1cbiAgICAuZW1haWxJbmZvOmhvdmVye1xuICAgICAgICBjb2xvcjogIzBkMGQwZDtcbiAgICB9XG4gICAgLm5vbmV7XG4gICAgICAgIGRpc3BsYXk6IG5vbmU7XG4gICAgfVxuICAgIC5hY3RpdmV7XG4gICAgICAgIGNvbG9yOiAjMGQwZDBkO1xuICAgIH1cbn1cbkBtZWRpYSBzY3JlZW4gYW5kIChtaW4td2lkdGg6IDE5MjBweCkge1xuICAgIC5oZWFsdGhTZXJ2ZXJ7XG4gICAgICAgIC50ZXh0Ym94e1xuICAgICAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgICAgICAgICAgLmJhY2tpY29ue1xuICAgICAgICAgICAgICAgIGhlaWdodDozODBweDtcbiAgICAgICAgICAgIH1cbiAgICAgICAgfVxuICAgIH1cbiAgICAuaGVhbHRoY29udGVudHtcbiAgICAgICAgLmhlYWx0aEJveHtcbiAgICAgICAgICAgIC5oZWFsdGhWb2ljZXtcbiAgICAgICAgICAgICAgICAudGV4dGJveHtcbiAgICAgICAgICAgICAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgICAgICAgICAgICAgICAgICAubGVhZHtcbiAgICAgICAgICAgICAgICAgICAgICAgIGZvbnQtd2VpZ2h0OiA2MDA7XG4gICAgICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgICAgICAgICAgLmJhY2tpY29ue1xuICAgICAgICAgICAgICAgICAgICAgICAgaGVpZ2h0OiA0NDBweDtcbiAgICAgICAgICAgICAgICAgICAgICAgIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XG4gICAgICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICB9XG4gICAgICAgICAgICAuaGVhbHRoTmV3c3tcbiAgICAgICAgICAgICAgICAudGV4dGJveHtcbiAgICAgICAgICAgICAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgICAgICAgICAgICAgICAgICAuYmFja2ljb257XG4gICAgICAgICAgICAgICAgICAgICAgICBoZWlnaHQ6IDQwMHB4O1xuICAgICAgICAgICAgICAgICAgICAgICAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcbiAgICAgICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgIH1cbiAgICAgICAgfVxuICAgIH1cbiAgICAubW9yZU5ld3Mge1xuICAgICAgICAuaGVhbHRobmV3c0NvbnRlbnQge1xuICAgICAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgICAgICAgICAgLm5ld3NMZWZ0e1xuICAgICAgICAgICAgICAgIGhlaWdodDogNDIwcHg7XG4gICAgICAgICAgICAgICAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcbiAgICAgICAgICAgICAgICB3aWR0aDozNSU7XG4gICAgICAgICAgICB9XG4gICAgICAgIH1cbiAgICB9XG59XG5AbWVkaWEgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiAxMzMwcHgpIHtcbiAgICAuaGVhbHRoU2VydmVyIHtcbiAgICAgICAgLnRleHRib3gge1xuICAgICAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgICAgICAgICAgdGV4dC1hbGlnbjogbGVmdDtcbiAgICAgICAgICAgIC13ZWJraXQtdHJhbnNpdGlvbjogYWxsIC4xcyBlYXNlLWluIC4wOHM7XG4gICAgICAgICAgICB0cmFuc2l0aW9uOiBhbGwgLjFzIGVhc2UtaW4gLjA4cztcbiAgICAgICAgICAgIC5iYWNraWNvbiB7XG4gICAgICAgICAgICAgICAgd2lkdGg6IDEwMCU7XG4gICAgICAgICAgICAgICAgaGVpZ2h0OiAxODBweDtcbiAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xuICAgICAgICAgICAgfVxuICAgICAgICB9XG4gICAgfVxuICAgIC5tb3JlTmV3c3tcbiAgICAgICAgd2lkdGg6IDEwMCU7XG4gICAgICAgIHBhZGRpbmc6IDIwcHggMTAlIDUwcHg7XG4gICAgICAgIC5tb3JlTmV3c3RpdGxle1xuICAgICAgICAgICAgZm9udC1zaXplOiAxOHB4O1xuICAgICAgICAgICAgcGFkZGluZy1ib3R0b206IDE1cHg7XG4gICAgICAgICAgICBib3JkZXItYm90dG9tOiAzcHggc29saWQgIzBhYmY5YlxuICAgICAgICB9XG4gICAgICAgIC5oZWFsdGhuZXdzQ29udGVudHtcbiAgICAgICAgICAgIGRpc3BsYXk6ZmxleDtcbiAgICAgICAgICAgIG1hcmdpbi10b3A6IDMwcHg7XG4gICAgICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgICAgICAubmV3c0xlZnR7XG4gICAgICAgICAgICAgICAgaGVpZ2h0OiAxODBweDtcbiAgICAgICAgICAgICAgICB3aWR0aDogMzUlO1xuICAgICAgICAgICAgICAgIG1hcmdpbi1yaWdodDogMjRweDtcbiAgICAgICAgICAgICAgICAubGFibGV7XG4gICAgICAgICAgICAgICAgICAgIGhlaWdodDogMzJweDtcbiAgICAgICAgICAgICAgICAgICAgcGFkZGluZzogMCA4cHggIDA7XG4gICAgICAgICAgICAgICAgICAgIGJhY2tncm91bmQtY29sb3I6ICMwYWJmOWI7XG4gICAgICAgICAgICAgICAgICAgIGxpbmUtaGVpZ2h0OiAzMnB4O1xuICAgICAgICAgICAgICAgICAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgICAgICAgICAgICAgICAgIC5sYWJsZUljb257XG4gICAgICAgICAgICAgICAgICAgICAgICBpbWd7XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgaGVpZ2h0OiAxOHB4O1xuICAgICAgICAgICAgICAgICAgICAgICAgICAgIHdpZHRoOiAxOHB4O1xuICAgICAgICAgICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICAgICAgICAgIC5sYWJsZVRleHR7XG4gICAgICAgICAgICAgICAgICAgICAgICBjb2xvcjogI2ZmZjtcbiAgICAgICAgICAgICAgICAgICAgICAgIGZvbnQtc2l6ZTogMTJweDtcbiAgICAgICAgICAgICAgICAgICAgICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbiAgICAgICAgICAgICAgICAgICAgICAgIHZlcnRpY2FsLWFsaWduOiBtaWRkbGU7XG4gICAgICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICB9XG4gICAgICAgICAgICAubmV3c1JpZ2h0e1xuICAgICAgICAgICAgICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICAgICAgICAgICAgICB3aWR0aDogNTUlO1xuICAgICAgICAgICAgICAgIC5yaWdodFRvcHtcbiAgICAgICAgICAgICAgICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgICAgICAgICAgICAgICB0b3A6IDEwcHg7XG4gICAgICAgICAgICAgICAgICAgIC50b3BUaXRsZXtcbiAgICAgICAgICAgICAgICAgICAgICAgIGNvbG9yOiAjM2QzZDNkO1xuICAgICAgICAgICAgICAgICAgICAgICAgZm9udC1zaXplOiAxOHB4O1xuICAgICAgICAgICAgICAgICAgICAgICAgZm9udC13ZWlnaHQ6IDYwMDtcbiAgICAgICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgICAgICAgICAudG9wVGV4dHtcbiAgICAgICAgICAgICAgICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgICAgICAgICAgICAgICAgIGNvbG9yOiAjOTI5MjkyO1xuICAgICAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgICAgIC5uZXdzVGltZXtcbiAgICAgICAgICAgICAgICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgICAgICAgICAgICAgICBib3R0b206IDVweDtcbiAgICAgICAgICAgICAgICAgICAgY29sb3I6ICM5MjkyOTI7XG4gICAgICAgICAgICAgICAgICAgIGZvbnQtc2l6ZTogMTJweDtcbiAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICB9XG4gICAgICAgIH1cbiAgICAgICAgLm1vcmVEYXRhe1xuICAgICAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgICAgICAgICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgICAgICAgICAgaGVpZ2h0OiA0MHB4O1xuICAgICAgICAgICAgd2lkdGg6IDEwMHB4O1xuICAgICAgICAgICAgbGluZS1oZWlnaHQ6IDQwcHg7XG4gICAgICAgICAgICBjb2xvcjogIzBhYmY5YjtcbiAgICAgICAgICAgIG1hcmdpbjogNTBweCBhdXRvIDEwcHg7XG4gICAgICAgICAgICBib3JkZXI6IDJweCBzb2xpZCAjMGFiZjliO1xuICAgICAgICB9XG4gICAgfVxufVxuLyoqKioqKioqKioqKioqKioqKiBwYyBzcGVjYWlsIGVuZCAqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKiovXG5cbi8qKioqKioqKioqKioqKioqIG1vYmlsZSBzcGVjYWlsIHN0YXJ0ICoqKioqKioqKioqKioqKioqKioqKioqKioqKioqKi9cblxuQG1lZGlhIHNjcmVlbiBhbmQgKG1heC13aWR0aDogNzY4cHgpIHtcbiAgICAuaGVhbHRoY29udGVudHtcbiAgICAgICAgd2lkdGg6IDEwMCU7XG4gICAgICAgIHBhZGRpbmc6IDBweCAxNXB4O1xuICAgICAgICAuaGVhbHRoQm94e1xuICAgICAgICAgICAgZGlzcGxheTogYmxvY2s7XG4gICAgICAgICAgICAuaGVhbHRoVm9pY2V7XG4gICAgICAgICAgICAgICAgbWFyZ2luLXJpZ2h0OiAzMHB4O1xuICAgICAgICAgICAgICAgIHdpZHRoOiAxMDAlO1xuICAgICAgICAgICAgICAgIC50aXRsZXtcbiAgICAgICAgICAgICAgICAgICAgY29sb3I6ICMzZDNkM2Q7XG4gICAgICAgICAgICAgICAgICAgIGZvbnQtc2l6ZTogMThweDtcbiAgICAgICAgICAgICAgICAgICAgYm9yZGVyLWJvdHRvbTogM3B4IHNvbGlkICMwYWJmOWI7XG4gICAgICAgICAgICAgICAgICAgIHBhZGRpbmctYm90dG9tOiAxNXB4O1xuICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgICAgICAudGV4dGJveDpob3ZlcntcbiAgICAgICAgICAgICAgICAgICAgLypib3gtc2hhZG93OiAwcHggMnB4IDI5cHggMHB4IHJnYmEoNTcsIDU3LCA1NywgMC4xOCk7Ki9cbiAgICAgICAgICAgICAgICAgICAgLyotd2Via2l0LXRyYW5zaXRpb246IGFsbCAuMjhzIGVhc2UtaW4gLjFzOyovXG4gICAgICAgICAgICAgICAgICAgIC8qdHJhbnNpdGlvbjogYWxsIC4yOHMgZWFzZS1pbiAuMXM7Ki9cbiAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICAgICAgLnRleHRib3gge1xuICAgICAgICAgICAgICAgICAgICAvKmJveC1zaGFkb3c6IDBweCAycHggMjlweCAwcHggcmdiYSg1NywgNTcsIDU3LCAwLjE4KTsqL1xuICAgICAgICAgICAgICAgICAgICBtYXJnaW4tdG9wOiAxNXB4O1xuICAgICAgICAgICAgICAgICAgICBtaW4taGVpZ2h0OjIwMHB4O1xuICAgICAgICAgICAgICAgICAgICB3aWR0aDogMTAwJTtcbiAgICAgICAgICAgICAgICAgICAgdGV4dC1hbGlnbjogbGVmdDtcbiAgICAgICAgICAgICAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgICAgICAgICAgICAgICAgICAubGFibGV7XG4gICAgICAgICAgICAgICAgICAgICAgICBwYWRkaW5nOiA1cHggMTVweDtcbiAgICAgICAgICAgICAgICAgICAgICAgIGJhY2tncm91bmQtY29sb3I6ICNmZmY7XG4gICAgICAgICAgICAgICAgICAgICAgICBsaW5lLWhlaWdodDogMzJweDtcbiAgICAgICAgICAgICAgICAgICAgICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgICAgICAgICAgICAgICAgICAgICAgIC5sYWJsZUljb257XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgaW1ne1xuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBoZWlnaHQ6IDE2cHg7XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHdpZHRoOiAxNnB4O1xuICAgICAgICAgICAgICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgICAgICAgICAgICAgIC5sYWJsZVRleHR7XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgY29sb3I6ICMwYWJmOWI7XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgZm9udC1zaXplOiAxMnB4O1xuICAgICAgICAgICAgICAgICAgICAgICAgICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICB2ZXJ0aWNhbC1hbGlnbjogbWlkZGxlO1xuICAgICAgICAgICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgICAgICAgICAgICAgLmZye1xuICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNvbG9yOiM5MjkyOTI7XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgZm9udC1zaXplOiAxMnB4O1xuICAgICAgICAgICAgICAgICAgICAgICAgfVxuXG4gICAgICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgICAgICAgICAgLmxlYWR7XG4gICAgICAgICAgICAgICAgICAgICAgICBmb250LXNpemU6IDE0cHg7XG4gICAgICAgICAgICAgICAgICAgICAgICBwYWRkaW5nOiAwcHggMTVweCAxNXB4O1xuICAgICAgICAgICAgICAgICAgICAgICAgY29sb3I6ICMzZDNkM2Q7XG4gICAgICAgICAgICAgICAgICAgICAgICBtYXJnaW4tYm90dG9tOjEwcHg7XG4gICAgICAgICAgICAgICAgICAgICAgICBoZWlnaHQ6IDM1cHg7XG4gICAgICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgICAgICAgICAgLmJhY2tpY29uIHtcbiAgICAgICAgICAgICAgICAgICAgICAgIHdpZHRoOjEwMCU7XG4gICAgICAgICAgICAgICAgICAgICAgICBoZWlnaHQ6IDE4MHB4O1xuICAgICAgICAgICAgICAgICAgICAgICAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcbiAgICAgICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgIH1cbiAgICAgICAgICAgIC5oZWFsdGhOZXdze1xuICAgICAgICAgICAgICAgIGJhY2tncm91bmQ6ICMwYWJmOWI7XG4gICAgICAgICAgICAgICAgbWFyZ2luLXRvcDogMjBweDtcbiAgICAgICAgICAgICAgICBwYWRkaW5nOiA1cHg7XG4gICAgICAgICAgICAgICAgd2lkdGg6IDEwMCU7XG4gICAgICAgICAgICAgICAgLnRpdGxle1xuICAgICAgICAgICAgICAgICAgICBwYWRkaW5nOiAxNXB4O1xuICAgICAgICAgICAgICAgICAgICBjb2xvcjogI2ZmZjtcbiAgICAgICAgICAgICAgICAgICAgZm9udC1zaXplOiAxOHB4O1xuICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgICAgICAudGV4dGJveCB7XG4gICAgICAgICAgICAgICAgICAgIHRleHQtYWxpZ246IGxlZnQ7XG4gICAgICAgICAgICAgICAgICAgIGJhY2tncm91bmQ6ICNmZmY7XG4gICAgICAgICAgICAgICAgICAgIG1hcmdpbjogMCAxNXB4IDMwcHg7XG4gICAgICAgICAgICAgICAgICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICAgICAgICAgICAgICAgICAgLmxhYmxle1xuICAgICAgICAgICAgICAgICAgICAgICAgcGFkZGluZzogNXB4IDE1cHg7XG4gICAgICAgICAgICAgICAgICAgICAgICBsaW5lLWhlaWdodDogMzJweDtcbiAgICAgICAgICAgICAgICAgICAgICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgICAgICAgICAgICAgICAgICAgICAgIC5mcntcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICBjb2xvcjojOTI5MjkyO1xuICAgICAgICAgICAgICAgICAgICAgICAgICAgIGZvbnQtc2l6ZTogMTJweDtcbiAgICAgICAgICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgICAgICAgICAgICAgIC5sYWJsZUljb257XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgaW1ne1xuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBoZWlnaHQ6IDE4cHg7XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHdpZHRoOiAxOHB4O1xuICAgICAgICAgICAgICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgICAgICAgICAgICAgIC5sYWJsZVRleHR7XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgY29sb3I6ICMwYWJmOWI7XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgZm9udC1zaXplOiAxMnB4O1xuICAgICAgICAgICAgICAgICAgICAgICAgICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICB2ZXJ0aWNhbC1hbGlnbjogbWlkZGxlO1xuICAgICAgICAgICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICAgICAgICAgIC5sZWFke1xuICAgICAgICAgICAgICAgICAgICAgICAgZm9udC1zaXplOiAxNHB4O1xuICAgICAgICAgICAgICAgICAgICAgICAgcGFkZGluZzogMHB4IDE1cHggMTVweDtcbiAgICAgICAgICAgICAgICAgICAgICAgIGNvbG9yOiAjM2QzZDNkO1xuICAgICAgICAgICAgICAgICAgICAgICAgbWFyZ2luLWJvdHRvbTowO1xuICAgICAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICAgICAgICAgIC5iYWNraWNvbiB7XG4gICAgICAgICAgICAgICAgICAgICAgICB3aWR0aDoxMDAlO1xuICAgICAgICAgICAgICAgICAgICAgICAgaGVpZ2h0OiAxNzVweDtcbiAgICAgICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgICAgIH1cblxuICAgICAgICAgICAgfVxuICAgICAgICB9XG4gICAgfVxuICAgIC5oZWFsdGhTZXJ2ZXJ7XG4gICAgICAgIHBhZGRpbmc6IDExMHB4IDE1cHggMzBweDtcbiAgICAgICAgLmNvbnRlbnRUaXRsZXtcbiAgICAgICAgICAgIC5tb2JsaWVUaXRsZXtcbiAgICAgICAgICAgICAgICBmb250LXNpemU6IDIycHg7XG4gICAgICAgICAgICAgICAgZm9udC13ZWlnaHQ6IDYwMDtcbiAgICAgICAgICAgIH1cbiAgICAgICAgfVxuICAgICAgICAudGV4dGJveCB7XG4gICAgICAgICAgICBtaW4taGVpZ2h0OjMwMHB4O1xuICAgICAgICAgICAgd2lkdGg6IDQ4JTtcbiAgICAgICAgICAgIHRleHQtYWxpZ246IGxlZnQ7XG4gICAgICAgICAgICAtd2Via2l0LXRyYW5zaXRpb246IGFsbCAuMXMgZWFzZS1pbiAuMDhzO1xuICAgICAgICAgICAgdHJhbnNpdGlvbjogYWxsIC4xcyBlYXNlLWluIC4wOHM7XG4gICAgICAgICAgICBwYWRkaW5nLWJvdHRvbTogMTBweDtcbiAgICAgICAgICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICAgICAgICAgIC5sYWJsZXtcbiAgICAgICAgICAgICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICAgICAgICAgICAgdG9wOiAwO1xuICAgICAgICAgICAgICAgIHBhZGRpbmc6IDAgOHB4IDAgMDtcbiAgICAgICAgICAgICAgICBoZWlnaHQ6IDMycHg7XG4gICAgICAgICAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogIzBhYmY5YjtcbiAgICAgICAgICAgICAgICBsaW5lLWhlaWdodDogMzJweDtcbiAgICAgICAgICAgICAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgICAgICAgICAgICAgLmZse1xuICAgICAgICAgICAgICAgICAgICBwYWRkaW5nLWxlZnQ6IDVweDtcbiAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICAgICAgLmxhYmxlSWNvbntcbiAgICAgICAgICAgICAgICAgICBpbWd7XG4gICAgICAgICAgICAgICAgICAgICAgIGhlaWdodDogMTZweDtcbiAgICAgICAgICAgICAgICAgICAgICAgd2lkdGg6IDE2cHg7XG4gICAgICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgICAgICAubGFibGVUZXh0e1xuICAgICAgICAgICAgICAgICAgICBjb2xvcjogI2ZmZjtcbiAgICAgICAgICAgICAgICAgICAgZm9udC1zaXplOiAxNHB4O1xuICAgICAgICAgICAgICAgICAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gICAgICAgICAgICAgICAgICAgIHZlcnRpY2FsLWFsaWduOiBtaWRkbGU7XG4gICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgfVxuICAgICAgICAgICAgLmxlYWR7XG4gICAgICAgICAgICAgICAgZm9udC1zaXplOiAxNHB4O1xuICAgICAgICAgICAgICAgIC8qcGFkZGluZzogMjBweCA1cHg7Ki9cbiAgICAgICAgICAgICAgICBjb2xvcjogIzNkM2QzZDtcbiAgICAgICAgICAgICAgICBtYXJnaW4tYm90dG9tOjA7XG4gICAgICAgICAgICB9XG4gICAgICAgICAgICAuYmFja2ljb24ge1xuICAgICAgICAgICAgICAgIHdpZHRoOjEwMCU7XG4gICAgICAgICAgICAgICAgaGVpZ2h0OiAxNzBweDtcbiAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xuICAgICAgICAgICAgfVxuICAgICAgICB9XG5cbiAgICB9XG4gICAgLm1vcmVOZXdze1xuICAgICAgICB3aWR0aDogMTAwJTtcbiAgICAgICAgcGFkZGluZzogMjVweCAxMCU7XG4gICAgICAgIC5tb3JlTmV3c3RpdGxle1xuICAgICAgICAgICAgZm9udC1zaXplOiAxOHB4O1xuICAgICAgICAgICAgcGFkZGluZy1ib3R0b206IDE1cHg7XG4gICAgICAgICAgICBib3JkZXItYm90dG9tOiAzcHggc29saWQgIzBhYmY5YlxuICAgICAgICB9XG4gICAgICAgIC5oZWFsdGhuZXdzQ29udGVudHtcbiAgICAgICAgICAgIGRpc3BsYXk6ZmxleDtcbiAgICAgICAgICAgIG1hcmdpbi10b3A6IDE1cHg7XG4gICAgICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgICAgICAubmV3c0xlZnR7XG4gICAgICAgICAgICAgICAgaGVpZ2h0OiAxODBweDtcbiAgICAgICAgICAgICAgICB3aWR0aDogMzAlO1xuICAgICAgICAgICAgICAgIG1hcmdpbi1yaWdodDogMjRweDtcbiAgICAgICAgICAgICAgICAubGFibGV7XG4gICAgICAgICAgICAgICAgICBwYWRkaW5nOiAwIDhweCAwO1xuICAgICAgICAgICAgICAgICAgICBoZWlnaHQ6IDMycHg7XG4gICAgICAgICAgICAgICAgICAgIGJhY2tncm91bmQtY29sb3I6ICMwYWJmOWI7XG4gICAgICAgICAgICAgICAgICAgIGxpbmUtaGVpZ2h0OiAzMnB4O1xuICAgICAgICAgICAgICAgICAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgICAgICAgICAgICAgICAgIC5sYWJsZUljb257XG4gICAgICAgICAgICAgICAgICAgICAgICBpbWd7XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgaGVpZ2h0OiAxNnB4O1xuICAgICAgICAgICAgICAgICAgICAgICAgICAgIHdpZHRoOiAxNnB4O1xuICAgICAgICAgICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICAgICAgICAgIC5sYWJsZVRleHR7XG4gICAgICAgICAgICAgICAgICAgICAgICBjb2xvcjogI2ZmZjtcbiAgICAgICAgICAgICAgICAgICAgICAgIGZvbnQtc2l6ZTogMTJweDtcbiAgICAgICAgICAgICAgICAgICAgICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbiAgICAgICAgICAgICAgICAgICAgICAgIHZlcnRpY2FsLWFsaWduOiBtaWRkbGU7XG4gICAgICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICB9XG4gICAgICAgICAgICAubmV3c1JpZ2h0bW9iaWxle1xuICAgICAgICAgICAgICAgIC5yaWdodFRvcHtcbiAgICAgICAgICAgICAgICAgICAgcGFkZGluZy10b3A6IDE1cHg7XG4gICAgICAgICAgICAgICAgICAgIC5sZWFke1xuICAgICAgICAgICAgICAgICAgICAgICAgbWFyZ2luLWJvdHRvbTogMTVweDtcbiAgICAgICAgICAgICAgICAgICAgICAgIGZvbnQtd2VpZ2h0OiA2MDA7XG4gICAgICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgICAgICAgICAgLnRvcFRpdGxle1xuICAgICAgICAgICAgICAgICAgICAgICAgY29sb3I6ICMzZDNkM2Q7XG4gICAgICAgICAgICAgICAgICAgICAgICBmb250LXdlaWdodDogNjAwO1xuICAgICAgICAgICAgICAgICAgICAgICAgZm9udC1zaXplOiAxOHB4O1xuICAgICAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICAgICAgICAgIC50b3BUZXh0e1xuICAgICAgICAgICAgICAgICAgICAgICAgZm9udC1zaXplOiAxNHB4O1xuICAgICAgICAgICAgICAgICAgICAgICAgY29sb3I6ICM5MjkyOTI7XG4gICAgICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICAgICAgLm5ld3NUaW1le1xuICAgICAgICAgICAgICAgICAgICBib3R0b206IDVweDtcbiAgICAgICAgICAgICAgICAgICAgY29sb3I6ICM5MjkyOTI7XG4gICAgICAgICAgICAgICAgICAgIGZvbnQtc2l6ZTogMTJweDtcbiAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICB9XG4gICAgICAgIH1cbiAgICAgICAgLm1vcmVEYXRhe1xuICAgICAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgICAgICAgICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgICAgICAgICAgaGVpZ2h0OiA0MHB4O1xuICAgICAgICAgICAgd2lkdGg6IDEwMHB4O1xuICAgICAgICAgICAgbGluZS1oZWlnaHQ6IDQwcHg7XG4gICAgICAgICAgICBjb2xvcjogIzBhYmY5YjtcbiAgICAgICAgICAgIG1hcmdpbjogMzBweCBhdXRvIDEwcHg7XG4gICAgICAgICAgICBib3JkZXI6IDFweCBzb2xpZCAjMGFiZjliO1xuXG4gICAgICAgIH1cbiAgICB9XG59XG5AbWVkaWEgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA3NjdweCkge1xuICAgIC5oZWFsdGhTZXJ2ZXJ7XG4gICAgICAgIHBhZGRpbmc6IDMwcHggMTVweCAxNXB4O1xuICAgICAgICAuY29udGVudFRpdGxle1xuICAgICAgICAgICAgLm1vYmxpZVRpdGxle1xuICAgICAgICAgICAgICAgIGZvbnQtc2l6ZTogMjJweDtcbiAgICAgICAgICAgICAgICBmb250LXdlaWdodDogNjAwO1xuICAgICAgICAgICAgfVxuICAgICAgICB9XG4gICAgICAgIC50ZXh0Ym94IHtcbiAgICAgICAgICAgIG1pbi1oZWlnaHQ6IDE1MHB4O1xuICAgICAgICAgICAgd2lkdGg6IDQ4JTtcbiAgICAgICAgICAgIHRleHQtYWxpZ246IGxlZnQ7XG4gICAgICAgICAgICAtd2Via2l0LXRyYW5zaXRpb246IGFsbCAuMXMgZWFzZS1pbiAuMDhzO1xuICAgICAgICAgICAgdHJhbnNpdGlvbjogYWxsIC4xcyBlYXNlLWluIC4wOHM7XG4gICAgICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgICAgICAubGFibGV7XG4gICAgICAgICAgICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgICAgICAgICAgIHRvcDogMDtcbiAgICAgICAgICAgICAgICBwYWRkaW5nOiAwIDhweCAwIDA7XG4gICAgICAgICAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICAgICAgICAgIGJhY2tncm91bmQtY29sb3I6ICMwYWJmOWI7XG4gICAgICAgICAgICAgICAgbGluZS1oZWlnaHQ6IDMycHg7XG4gICAgICAgICAgICAgICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgICAgICAgICAgICAgIC5mbHtcbiAgICAgICAgICAgICAgICAgICAgcGFkZGluZy1sZWZ0OiA1cHg7XG4gICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgICAgIC5sYWJsZUljb257XG4gICAgICAgICAgICAgICAgICAgaW1ne1xuICAgICAgICAgICAgICAgICAgICAgICBoZWlnaHQ6IDE2cHg7XG4gICAgICAgICAgICAgICAgICAgICAgIHdpZHRoOiAxNnB4O1xuICAgICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICAgICAgLmxhYmxlVGV4dHtcbiAgICAgICAgICAgICAgICAgICAgY29sb3I6ICNmZmY7XG4gICAgICAgICAgICAgICAgICAgIGZvbnQtc2l6ZTogMTJweDtcbiAgICAgICAgICAgICAgICAgICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICAgICAgICAgICAgICAgICAgICB2ZXJ0aWNhbC1hbGlnbjogbWlkZGxlO1xuICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgIH1cbiAgICAgICAgICAgIC5sZWFke1xuICAgICAgICAgICAgICAgIGZvbnQtc2l6ZTogMTJweDtcbiAgICAgICAgICAgICAgICAvKnBhZGRpbmc6IDIwcHggNXB4OyovXG4gICAgICAgICAgICAgICAgY29sb3I6ICMzZDNkM2Q7XG4gICAgICAgICAgICAgICAgbWFyZ2luLWJvdHRvbTowO1xuICAgICAgICAgICAgfVxuICAgICAgICAgICAgLmJhY2tpY29uIHtcbiAgICAgICAgICAgICAgICB3aWR0aDoxMDAlO1xuICAgICAgICAgICAgICAgIGhlaWdodDogMTAwcHg7XG4gICAgICAgICAgICAgICAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcbiAgICAgICAgICAgIH1cbiAgICAgICAgfVxuXG4gICAgfVxuICAgIC5tb3JlTmV3c3tcbiAgICAgICAgd2lkdGg6IDEwMCU7XG4gICAgICAgIHBhZGRpbmc6IDI1cHggMTVweDtcbiAgICAgICAgLm1vcmVOZXdzdGl0bGV7XG4gICAgICAgICAgICBmb250LXNpemU6IDE2cHg7XG4gICAgICAgICAgICBwYWRkaW5nLWJvdHRvbTogMTVweDtcbiAgICAgICAgICAgIGJvcmRlci1ib3R0b206IDNweCBzb2xpZCAjMGFiZjliXG4gICAgICAgIH1cbiAgICAgICAgLmhlYWx0aG5ld3NDb250ZW50e1xuICAgICAgICAgICAgZGlzcGxheTpibG9jaztcbiAgICAgICAgICAgIG1hcmdpbi10b3A6IDMwcHg7XG4gICAgICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgICAgICAubmV3c0xlZnR7XG4gICAgICAgICAgICAgICAgaGVpZ2h0OiAxODBweDtcbiAgICAgICAgICAgICAgICB3aWR0aDogMTAwJTtcbiAgICAgICAgICAgICAgICBtYXJnaW4tcmlnaHQ6IDE1cHg7XG4gICAgICAgICAgICAgICAgLmxhYmxle1xuICAgICAgICAgICAgICAgICAgICBoZWlnaHQ6IDMycHg7XG4gICAgICAgICAgICAgICAgICAgIHBhZGRpbmc6IDAgOHB4IDA7XG4gICAgICAgICAgICAgICAgICAgIGJhY2tncm91bmQtY29sb3I6ICMwYWJmOWI7XG4gICAgICAgICAgICAgICAgICAgIGxpbmUtaGVpZ2h0OiAzMnB4O1xuICAgICAgICAgICAgICAgICAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgICAgICAgICAgICAgICAgIC5sYWJsZUljb257XG4gICAgICAgICAgICAgICAgICAgICAgIGltZ3tcbiAgICAgICAgICAgICAgICAgICAgICAgICAgIGhlaWdodDogMTZweDtcbiAgICAgICAgICAgICAgICAgICAgICAgICAgIHdpZHRoOiAxNnB4O1xuICAgICAgICAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgICAgICAgICAgLmxhYmxlVGV4dHtcbiAgICAgICAgICAgICAgICAgICAgICAgIGNvbG9yOiAjZmZmO1xuICAgICAgICAgICAgICAgICAgICAgICAgZm9udC1zaXplOiAxMnB4O1xuICAgICAgICAgICAgICAgICAgICAgICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICAgICAgICAgICAgICAgICAgICAgICAgdmVydGljYWwtYWxpZ246IG1pZGRsZTtcbiAgICAgICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgIH1cbiAgICAgICAgICAgIC5uZXdzUmlnaHRtb2JpbGV7XG4gICAgICAgICAgICAgICAgLnJpZ2h0VG9we1xuICAgICAgICAgICAgICAgICAgICAudG9wVGl0bGV7XG4gICAgICAgICAgICAgICAgICAgICAgICBjb2xvcjogIzNkM2QzZDtcbiAgICAgICAgICAgICAgICAgICAgICAgIGZvbnQtd2VpZ2h0OiA2MDA7XG4gICAgICAgICAgICAgICAgICAgICAgICBmb250LXNpemU6IDE2cHg7XG4gICAgICAgICAgICAgICAgICAgICAgICBwYWRkaW5nOiAxNXB4IDAgMHB4O1xuICAgICAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICAgICAgICAgIC50b3BUZXh0e1xuICAgICAgICAgICAgICAgICAgICAgICAgZm9udC1zaXplOiAxMnB4O1xuICAgICAgICAgICAgICAgICAgICAgICAgY29sb3I6ICM5MjkyOTI7XG4gICAgICAgICAgICAgICAgICAgICAgICBwYWRkaW5nLXRvcDogNXB4O1xuICAgICAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICAgICAgICAgIC5uZXdzVGltZXtcbiAgICAgICAgICAgICAgICAgICAgICAgIGNvbG9yOiAjOTI5MjkyO1xuICAgICAgICAgICAgICAgICAgICAgICAgZm9udC1zaXplOiAxMnB4O1xuICAgICAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgfVxuICAgICAgICB9XG4gICAgfVxufVxuLyoqKioqKioqKioqKioqKiogbW9iaWxlIHNwZWNhaWwgZW5kICoqKioqKioqKioqKioqKioqKioqKioqKioqKioqL1xuIl0sInNvdXJjZVJvb3QiOiIifQ== */</style><style type="text/css">
+.fixed-top {
+  background: #000 !important;
+  -webkit-transform: translate(0, 100px);
+          transform: translate(0, 100px);
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+}
+.fixed-topone {
+  background: #000 !important;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #fff;
+}
+.navbar-default .navbar-nav > li > a:before {
+  border-bottom: 1px solid #fff;
+  content: " ";
+}
+.navbar-brand {
+  height: 55px;
+}
+.collapse {
+  display: block;
+}
+.navbar-toggle {
+  /*transform: translate3d(34%,0,0);*/
+}
+
+/*.collapse in{*/
+
+/*!*display: block;*!*/
+
+/*transform: translateZ(0);*/
+
+/*}*/
+.navbar {
+  background: rgba(255, 255, 255, 0);
+  margin-bottom: 0;
+  width: 100%;
+  border: none;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background: #fff;
+  -webkit-transition: all .3s ease 0s;
+  transition: all .3s ease 0s;
+}
+.navbar-default .open span:nth-child(2) {
+  position: absolute;
+  margin: 3px 0 0;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.navbar-default .open span:nth-child(3) {
+  opacity: 1;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.navbar-default .open span:nth-child(4) {
+  opacity: 0;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+}
+.open span:nth-child(1) {
+  opacity: 0;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+}
+
+/****************** pc specail start *********************************/
+.active:after {
+  display: table;
+  content: " ";
+  height: 4px;
+  width: 20px;
+  text-align: center;
+  border-radius: 4px;
+  background: white;
+  margin: 6px auto;
+}
+.navbar .nav > li .dropdownMenu {
+  margin: 0;
+  text-align: center;
+  background: #000;
+  color: #fff;
+  padding: 0px 0 15px;
+  display: none;
+  position: absolute;
+  min-width: 150px;
+  left: -25px;
+  top: 70px;
+}
+.navbar .nav > li .dropdownMenu1 {
+  text-align: left;
+}
+.navbar .nav > li:hover .dropdownMenu {
+  display: block;
+  color: #fff;
+}
+
+/*.navbar .nav > li .dropdownMenu:hover{*/
+
+/*display: block;*/
+
+/*color: #fff;*/
+
+/*}*/
+.dropdownMenu > li > a {
+  padding: 15px 0px 15px;
+  color: #fff;
+  display: block;
+  font-size: 14px;
+  margin-bottom: -1x;
+}
+.dropdownMenu1 > li > a {
+  padding-left: 24px;
+  color: #fff;
+  display: block;
+  font-size: 14px;
+}
+@media screen and (min-width: 768px) {
+.navbar .nav > li:hover .spanborder {
+    color: #fff;
+}
+.navbar-nav > li > a {
+    padding-top: 32px;
+    padding-bottom: 33px;
+}
+.navbar .nav .dropdownMenu > li > a:hover {
+    cursor: pointer;
+    background: #f4f4f4;
+    color: #232323;
+}
+.navbar-right {
+    margin-right: 10%;
+    height: 80px;
+}
+.container-fluid {
+    padding-left: 10%;
+}
+.navbar-brand {
+    margin-top: 10px;
+}
+.dropdownMenu > li .childText {
+    padding: 3px 0px 0px;
+    clear: both;
+    color: #d1d1d1;
+    font-size: 12px;
+    white-space: nowrap;
+}
+.dropdownMenu1 > li .childText {
+    padding: 3px 24px 0px;
+    clear: both;
+    color: #d1d1d1;
+    font-size: 12px;
+    white-space: nowrap;
+}
+.dropdownMenu > li .childText:hover {
+    cursor: pointer;
+    background: #f4f4f4;
+    color: #232323;
+}
+}
+
+/****************** pc specail end *********************************/
+
+/**************** mobile specail start ******************************/
+@media screen and (max-width: 768px) {
+#bs-example-navbar-collapse-1 {
+    min-height: 100vh;
+    background: #212020;
+    text-align: center;
+    font-size: 18px;
+    position: absolute;
+    width: 100%;
+}
+.navbar-collapse {
+    -webkit-transform: translate3d(100%, 0, 0);
+            transform: translate3d(100%, 0, 0);
+}
+.transform {
+    -webkit-transform: translate3d(0%, 0, 0);
+            transform: translate3d(0%, 0, 0);
+    -webkit-transition: -webkit-transform .3s;
+    transition: -webkit-transform .3s;
+    transition: transform .3s;
+    transition: transform .3s, -webkit-transform .3s;
+}
+.transformnone {
+    -webkit-transform: translate3d(100%, 0, 0);
+            transform: translate3d(100%, 0, 0);
+    -webkit-transition: -webkit-transform .3s;
+    transition: -webkit-transform .3s;
+    transition: transform .3s;
+    transition: transform .3s, -webkit-transform .3s;
+}
+.fixed-topone {
+    background: rgba(255, 255, 255, 0) !important;
+}
+.col-sm-3 {
+    margin-bottom: 10px;
+}
+.navbar-nav {
+    margin: 30px -15px;
+}
+}
+@media screen and (max-width: 750px) {
+.healthheader {
+    margin-bottom: 50px;
+}
+.navbar .nav > li:hover .spanborder {
+    color: #fff;
+}
+.mobile-header {
+    background: #212020;
+}
+.main {
+    overflow: hidden;
+}
+.nav > li {
+    margin: 40px 0;
+}
+}
+.navbar-toggle {
+  padding: 13px 6px;
+}
+.navbar-default .navbar-toggle {
+  border: none;
+}
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+  background-color: #212020;
+}
+
+/**************** mobile specail end *****************************/
+
+/*# sourceURL=D:/han work/ifxj_web_pc/src/components/D:/han work/ifxj_web_pc/src/components/headercontent.vue */
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkQ6L2hhbiB3b3JrL2lmeGpfd2ViX3BjL3NyYy9jb21wb25lbnRzL0Q6L2hhbiB3b3JrL2lmeGpfd2ViX3BjL3NyYy9jb21wb25lbnRzL2hlYWRlcmNvbnRlbnQudnVlIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFDSTtFQUNJLDRCQUEyQjtFQUMzQix1Q0FBNkI7VUFBN0IsK0JBQTZCO0VBQzdCLDBDQUF5QjtFQUF6QixrQ0FBeUI7RUFBekIsMEJBQXlCO0VBQXpCLGlEQUF5QjtDQUM1QjtBQUNEO0VBQ0ksNEJBQTJCO0NBQzlCO0FBQ0Q7RUFDSSxZQUFXO0NBQ2Q7QUFFRDtFQUNJLDhCQUE2QjtFQUM3QixhQUFZO0NBQ2Y7QUFDTDtFQUNJLGFBQVk7Q0FDZjtBQUNHO0VBQ0ksZUFBYztDQUVqQjtBQUdEO0VBRUksb0NBQW9DO0NBQ3ZDOztBQUNMLGlCQUFpQjs7QUFDYix1QkFBdUI7O0FBQ3ZCLDZCQUE2Qjs7QUFDakMsS0FBSztBQUNMO0VBQ1EsbUNBQWtDO0VBQ2xDLGlCQUFnQjtFQUNoQixZQUFXO0VBQ1gsYUFBWTtDQUNmO0FBQ0Q7RUFDSSxpQkFBZ0I7RUFDZixvQ0FBMkI7RUFBM0IsNEJBQTJCO0NBQy9CO0FBQ0Q7RUFDSSxtQkFBa0I7RUFDbEIsZ0JBQWU7RUFDZixrQ0FBeUI7VUFBekIsMEJBQXlCO0NBQzVCO0FBQ0Q7RUFDSSxXQUFVO0VBQ1YsNkRBQTREO0VBQzVELGlDQUF3QjtVQUF4Qix5QkFBd0I7Q0FDM0I7QUFDRDtFQUNJLFdBQVU7RUFDViwyREFBMEQ7Q0FDN0Q7QUFDRDtFQUNJLFdBQVU7RUFDViwyREFBMEQ7Q0FDN0Q7O0FBRUQsdUVBQXVFO0FBQ3ZFO0VBQ0ksZUFBYztFQUNkLGFBQVk7RUFDWixZQUFXO0VBQ1gsWUFBVztFQUNYLG1CQUFrQjtFQUNsQixtQkFBa0I7RUFDbEIsa0JBQWtDO0VBQ2xDLGlCQUFnQjtDQUNuQjtBQUNEO0VBQ0ksVUFBUztFQUNULG1CQUFrQjtFQUNsQixpQkFBZ0I7RUFDaEIsWUFBVztFQUNYLG9CQUFtQjtFQUNuQixjQUFhO0VBQ2IsbUJBQWtCO0VBQ2xCLGlCQUFnQjtFQUNoQixZQUFXO0VBQ1gsVUFBUTtDQUNYO0FBQ0Q7RUFDSSxpQkFBZ0I7Q0FDbkI7QUFFRDtFQUNJLGVBQWM7RUFDZCxZQUFXO0NBQ2Q7O0FBQ0QsMENBQTBDOztBQUN0QyxtQkFBbUI7O0FBQ25CLGdCQUFnQjs7QUFDcEIsS0FBSztBQUNMO0VBQ0ksdUJBQXNCO0VBQ3RCLFlBQVc7RUFDWCxlQUFjO0VBQ2QsZ0JBQWU7RUFDZixtQkFBa0I7Q0FDckI7QUFDRDtFQUNJLG1CQUFrQjtFQUNsQixZQUFXO0VBQ1gsZUFBYztFQUNkLGdCQUFlO0NBQ2xCO0FBQ0Q7QUFDSTtJQUNJLFlBQVc7Q0FDZDtBQUNEO0lBQ0ksa0JBQWlCO0lBQ2pCLHFCQUFvQjtDQUN2QjtBQUNEO0lBQ0ksZ0JBQWU7SUFDZixvQkFBbUI7SUFDbkIsZUFBYztDQUNqQjtBQUNEO0lBQ0ksa0JBQWlCO0lBQ2pCLGFBQVk7Q0FDZjtBQUNEO0lBQ0ksa0JBQWlCO0NBQ3BCO0FBQ0Q7SUFDSSxpQkFBZ0I7Q0FDbkI7QUFDRDtJQUNJLHFCQUFvQjtJQUNwQixZQUFXO0lBQ1gsZUFBYztJQUNkLGdCQUFlO0lBQ2Ysb0JBQW1CO0NBQ3RCO0FBQ0Q7SUFDSSxzQkFBcUI7SUFDckIsWUFBVztJQUNYLGVBQWM7SUFDZCxnQkFBZTtJQUNmLG9CQUFtQjtDQUN0QjtBQUNEO0lBQ0ksZ0JBQWU7SUFDZixvQkFBbUI7SUFDbkIsZUFBYztDQUNqQjtDQUFBOztBQUdMLHFFQUFxRTs7QUFDckUsc0VBQXNFO0FBQ3RFO0FBQ0k7SUFDSSxrQkFBaUI7SUFDakIsb0JBQW1CO0lBQ25CLG1CQUFrQjtJQUNsQixnQkFBZTtJQUNmLG1CQUFrQjtJQUNsQixZQUFVO0NBQ2I7QUFDRDtJQUNJLDJDQUFnQztZQUFoQyxtQ0FBZ0M7Q0FDbkM7QUFDRDtJQUNJLHlDQUE4QjtZQUE5QixpQ0FBOEI7SUFDOUIsMENBQXlCO0lBQXpCLGtDQUF5QjtJQUF6QiwwQkFBeUI7SUFBekIsaURBQXlCO0NBQzVCO0FBQ0Q7SUFDSSwyQ0FBZ0M7WUFBaEMsbUNBQWdDO0lBQ2hDLDBDQUF5QjtJQUF6QixrQ0FBeUI7SUFBekIsMEJBQXlCO0lBQXpCLGlEQUF5QjtDQUM1QjtBQUNEO0lBQ0ksOENBQTRDO0NBQy9DO0FBQ0Q7SUFDSSxvQkFBbUI7Q0FDdEI7QUFDRDtJQUNJLG1CQUFrQjtDQUNyQjtDQUFBO0FBR0w7QUFDSTtJQUNJLG9CQUFrQjtDQUNyQjtBQUNEO0lBQ0ksWUFBVztDQUNkO0FBQ0Q7SUFDSSxvQkFBbUI7Q0FDdEI7QUFDRDtJQUNJLGlCQUFnQjtDQUNuQjtBQUVEO0lBQ0ksZUFBYztDQUNqQjtDQUFBO0FBRUw7RUFDSSxrQkFBaUI7Q0FDcEI7QUFDRDtFQUNJLGFBQVk7Q0FDZjtBQUNEO0VBQ0ksMEJBQXlCO0NBQzVCOztBQUNELG1FQUFtRSIsImZpbGUiOiJoZWFkZXJjb250ZW50LnZ1ZSIsInNvdXJjZXNDb250ZW50IjpbIlxuICAgIC5maXhlZC10b3Age1xuICAgICAgICBiYWNrZ3JvdW5kOiAjMDAwICFpbXBvcnRhbnQ7XG4gICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKDAsMTAwcHgpO1xuICAgICAgICB0cmFuc2l0aW9uOiB0cmFuc2Zvcm0gLjVzO1xuICAgIH1cbiAgICAuZml4ZWQtdG9wb25le1xuICAgICAgICBiYWNrZ3JvdW5kOiAjMDAwICFpbXBvcnRhbnQ7XG4gICAgfVxuICAgIC5uYXZiYXItZGVmYXVsdCAubmF2YmFyLW5hdiA+IGxpID4gYSB7XG4gICAgICAgIGNvbG9yOiAjZmZmO1xuICAgIH1cblxuICAgIC5uYXZiYXItZGVmYXVsdCAubmF2YmFyLW5hdiA+IGxpID4gYTpiZWZvcmUge1xuICAgICAgICBib3JkZXItYm90dG9tOiAxcHggc29saWQgI2ZmZjtcbiAgICAgICAgY29udGVudDogXCIgXCI7XG4gICAgfVxuLm5hdmJhci1icmFuZHtcbiAgICBoZWlnaHQ6IDU1cHg7XG59XG4gICAgLmNvbGxhcHNle1xuICAgICAgICBkaXNwbGF5OiBibG9jaztcblxuICAgIH1cblxuXG4gICAgLm5hdmJhci10b2dnbGV7XG5cbiAgICAgICAgLyp0cmFuc2Zvcm06IHRyYW5zbGF0ZTNkKDM0JSwwLDApOyovXG4gICAgfVxuLyouY29sbGFwc2UgaW57Ki9cbiAgICAvKiEqZGlzcGxheTogYmxvY2s7KiEqL1xuICAgIC8qdHJhbnNmb3JtOiB0cmFuc2xhdGVaKDApOyovXG4vKn0qL1xuLm5hdmJhciB7XG4gICAgICAgIGJhY2tncm91bmQ6IHJnYmEoMjU1LCAyNTUsIDI1NSwgMCk7XG4gICAgICAgIG1hcmdpbi1ib3R0b206IDA7XG4gICAgICAgIHdpZHRoOiAxMDAlO1xuICAgICAgICBib3JkZXI6IG5vbmU7XG4gICAgfVxuICAgIC5uYXZiYXItZGVmYXVsdCAubmF2YmFyLXRvZ2dsZSAuaWNvbi1iYXJ7XG4gICAgICAgIGJhY2tncm91bmQ6ICNmZmY7XG4gICAgICAgICB0cmFuc2l0aW9uOiBhbGwgLjNzIGVhc2UgMHM7XG4gICAgfVxuICAgIC5uYXZiYXItZGVmYXVsdCAub3BlbiBzcGFuOm50aC1jaGlsZCgyKSB7XG4gICAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgICAgbWFyZ2luOiAzcHggMCAwO1xuICAgICAgICB0cmFuc2Zvcm06IHJvdGF0ZSgtNDVkZWcpO1xuICAgIH1cbiAgICAubmF2YmFyLWRlZmF1bHQgLm9wZW4gc3BhbjpudGgtY2hpbGQoMykge1xuICAgICAgICBvcGFjaXR5OiAxO1xuICAgICAgICBmaWx0ZXI6IHByb2dpZDpEWEltYWdlVHJhbnNmb3JtLk1pY3Jvc29mdC5BbHBoYShPcGFjaXR5PTEwMCk7XG4gICAgICAgIHRyYW5zZm9ybTogcm90YXRlKDQ1ZGVnKTtcbiAgICB9XG4gICAgLm5hdmJhci1kZWZhdWx0IC5vcGVuIHNwYW46bnRoLWNoaWxkKDQpIHtcbiAgICAgICAgb3BhY2l0eTogMDtcbiAgICAgICAgZmlsdGVyOiBwcm9naWQ6RFhJbWFnZVRyYW5zZm9ybS5NaWNyb3NvZnQuQWxwaGEoT3BhY2l0eT0wKTtcbiAgICB9XG4gICAgLm9wZW4gc3BhbjpudGgtY2hpbGQoMSkge1xuICAgICAgICBvcGFjaXR5OiAwO1xuICAgICAgICBmaWx0ZXI6IHByb2dpZDpEWEltYWdlVHJhbnNmb3JtLk1pY3Jvc29mdC5BbHBoYShPcGFjaXR5PTApO1xuICAgIH1cblxuICAgIC8qKioqKioqKioqKioqKioqKiogcGMgc3BlY2FpbCBzdGFydCAqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKiovXG4gICAgLmFjdGl2ZTphZnRlcntcbiAgICAgICAgZGlzcGxheTogdGFibGU7XG4gICAgICAgIGNvbnRlbnQ6IFwiIFwiO1xuICAgICAgICBoZWlnaHQ6IDRweDtcbiAgICAgICAgd2lkdGg6IDIwcHg7XG4gICAgICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBiYWNrZ3JvdW5kOiByZ2JhKDI1NSwgMjU1LCAyNTUsIDEpO1xuICAgICAgICBtYXJnaW46IDZweCBhdXRvO1xuICAgIH1cbiAgICAubmF2YmFyIC5uYXYgPiBsaSAuZHJvcGRvd25NZW51IHtcbiAgICAgICAgbWFyZ2luOiAwO1xuICAgICAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgICAgIGJhY2tncm91bmQ6ICMwMDA7XG4gICAgICAgIGNvbG9yOiAjZmZmO1xuICAgICAgICBwYWRkaW5nOiAwcHggMCAxNXB4O1xuICAgICAgICBkaXNwbGF5OiBub25lO1xuICAgICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICAgIG1pbi13aWR0aDogMTUwcHg7XG4gICAgICAgIGxlZnQ6IC0yNXB4O1xuICAgICAgICB0b3A6NzBweDtcbiAgICB9XG4gICAgLm5hdmJhciAubmF2ID4gbGkgLmRyb3Bkb3duTWVudTF7XG4gICAgICAgIHRleHQtYWxpZ246IGxlZnQ7XG4gICAgfVxuXG4gICAgLm5hdmJhciAubmF2ID4gbGk6aG92ZXIgLmRyb3Bkb3duTWVudXtcbiAgICAgICAgZGlzcGxheTogYmxvY2s7XG4gICAgICAgIGNvbG9yOiAjZmZmO1xuICAgIH1cbiAgICAvKi5uYXZiYXIgLm5hdiA+IGxpIC5kcm9wZG93bk1lbnU6aG92ZXJ7Ki9cbiAgICAgICAgLypkaXNwbGF5OiBibG9jazsqL1xuICAgICAgICAvKmNvbG9yOiAjZmZmOyovXG4gICAgLyp9Ki9cbiAgICAuZHJvcGRvd25NZW51ID4gbGkgPiBhIHtcbiAgICAgICAgcGFkZGluZzogMTVweCAwcHggMTVweDtcbiAgICAgICAgY29sb3I6ICNmZmY7XG4gICAgICAgIGRpc3BsYXk6IGJsb2NrO1xuICAgICAgICBmb250LXNpemU6IDE0cHg7XG4gICAgICAgIG1hcmdpbi1ib3R0b206IC0xeDtcbiAgICB9XG4gICAgLmRyb3Bkb3duTWVudTEgPiBsaSA+IGEge1xuICAgICAgICBwYWRkaW5nLWxlZnQ6IDI0cHg7XG4gICAgICAgIGNvbG9yOiAjZmZmO1xuICAgICAgICBkaXNwbGF5OiBibG9jaztcbiAgICAgICAgZm9udC1zaXplOiAxNHB4O1xuICAgIH1cbiAgICBAbWVkaWEgc2NyZWVuIGFuZCAobWluLXdpZHRoOjc2OHB4KXtcbiAgICAgICAgLm5hdmJhciAubmF2ID4gbGk6aG92ZXIgLnNwYW5ib3JkZXIge1xuICAgICAgICAgICAgY29sb3I6ICNmZmY7XG4gICAgICAgIH1cbiAgICAgICAgLm5hdmJhci1uYXY+bGk+YXtcbiAgICAgICAgICAgIHBhZGRpbmctdG9wOiAzMnB4O1xuICAgICAgICAgICAgcGFkZGluZy1ib3R0b206IDMzcHg7XG4gICAgICAgIH1cbiAgICAgICAgLm5hdmJhciAubmF2IC5kcm9wZG93bk1lbnUgPiBsaSA+IGE6aG92ZXIgeyAvL+WtkOiPnOWNlWhvdmVcbiAgICAgICAgICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICAgICAgICAgIGJhY2tncm91bmQ6ICNmNGY0ZjQ7XG4gICAgICAgICAgICBjb2xvcjogIzIzMjMyMztcbiAgICAgICAgfVxuICAgICAgICAubmF2YmFyLXJpZ2h0IHtcbiAgICAgICAgICAgIG1hcmdpbi1yaWdodDogMTAlO1xuICAgICAgICAgICAgaGVpZ2h0OiA4MHB4O1xuICAgICAgICB9XG4gICAgICAgIC5jb250YWluZXItZmx1aWR7XG4gICAgICAgICAgICBwYWRkaW5nLWxlZnQ6IDEwJTtcbiAgICAgICAgfVxuICAgICAgICAubmF2YmFyLWJyYW5ke1xuICAgICAgICAgICAgbWFyZ2luLXRvcDogMTBweDtcbiAgICAgICAgfVxuICAgICAgICAuZHJvcGRvd25NZW51ID4gbGkgLmNoaWxkVGV4dCB7XG4gICAgICAgICAgICBwYWRkaW5nOiAzcHggMHB4IDBweDtcbiAgICAgICAgICAgIGNsZWFyOiBib3RoO1xuICAgICAgICAgICAgY29sb3I6ICNkMWQxZDE7XG4gICAgICAgICAgICBmb250LXNpemU6IDEycHg7XG4gICAgICAgICAgICB3aGl0ZS1zcGFjZTogbm93cmFwO1xuICAgICAgICB9XG4gICAgICAgIC5kcm9wZG93bk1lbnUxID4gbGkgLmNoaWxkVGV4dCB7XG4gICAgICAgICAgICBwYWRkaW5nOiAzcHggMjRweCAwcHg7XG4gICAgICAgICAgICBjbGVhcjogYm90aDtcbiAgICAgICAgICAgIGNvbG9yOiAjZDFkMWQxO1xuICAgICAgICAgICAgZm9udC1zaXplOiAxMnB4O1xuICAgICAgICAgICAgd2hpdGUtc3BhY2U6IG5vd3JhcDtcbiAgICAgICAgfVxuICAgICAgICAuZHJvcGRvd25NZW51ID4gbGkgLmNoaWxkVGV4dDpob3ZlciB7IC8v5a2Q6I+c5Y2VaG92ZVxuICAgICAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgICAgICAgICAgYmFja2dyb3VuZDogI2Y0ZjRmNDtcbiAgICAgICAgICAgIGNvbG9yOiAjMjMyMzIzO1xuICAgICAgICB9XG4gICAgfVxuXG4gICAgLyoqKioqKioqKioqKioqKioqKiBwYyBzcGVjYWlsIGVuZCAqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKiovXG4gICAgLyoqKioqKioqKioqKioqKiogbW9iaWxlIHNwZWNhaWwgc3RhcnQgKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqL1xuICAgIEBtZWRpYSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDc2OHB4KSB7XG4gICAgICAgICNicy1leGFtcGxlLW5hdmJhci1jb2xsYXBzZS0xIHtcbiAgICAgICAgICAgIG1pbi1oZWlnaHQ6IDEwMHZoO1xuICAgICAgICAgICAgYmFja2dyb3VuZDogIzIxMjAyMDtcbiAgICAgICAgICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgICAgICAgICAgIGZvbnQtc2l6ZTogMThweDtcbiAgICAgICAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgICAgICAgIHdpZHRoOjEwMCU7XG4gICAgICAgIH1cbiAgICAgICAgLm5hdmJhci1jb2xsYXBzZXtcbiAgICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlM2QoMTAwJSwwLDApO1xuICAgICAgICB9XG4gICAgICAgIC50cmFuc2Zvcm17XG4gICAgICAgICAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZTNkKDAlLDAsMCk7XG4gICAgICAgICAgICB0cmFuc2l0aW9uOiB0cmFuc2Zvcm0gLjNzO1xuICAgICAgICB9XG4gICAgICAgIC50cmFuc2Zvcm1ub25le1xuICAgICAgICAgICAgdHJhbnNmb3JtOiB0cmFuc2xhdGUzZCgxMDAlLDAsMCk7XG4gICAgICAgICAgICB0cmFuc2l0aW9uOiB0cmFuc2Zvcm0gLjNzO1xuICAgICAgICB9XG4gICAgICAgIC5maXhlZC10b3BvbmV7XG4gICAgICAgICAgICBiYWNrZ3JvdW5kOiByZ2JhKDI1NSwgMjU1LCAyNTUsIDApIWltcG9ydGFudDtcbiAgICAgICAgfVxuICAgICAgICAuY29sLXNtLTMge1xuICAgICAgICAgICAgbWFyZ2luLWJvdHRvbTogMTBweDtcbiAgICAgICAgfVxuICAgICAgICAubmF2YmFyLW5hdiB7XG4gICAgICAgICAgICBtYXJnaW46IDMwcHggLTE1cHg7XG4gICAgICAgIH1cbiAgICB9XG5cbiAgICBAbWVkaWEgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA3NTBweCkge1xuICAgICAgICAuaGVhbHRoaGVhZGVye1xuICAgICAgICAgICAgbWFyZ2luLWJvdHRvbTo1MHB4O1xuICAgICAgICB9XG4gICAgICAgIC5uYXZiYXIgLm5hdiA+IGxpOmhvdmVyIC5zcGFuYm9yZGVyIHtcbiAgICAgICAgICAgIGNvbG9yOiAjZmZmO1xuICAgICAgICB9XG4gICAgICAgIC5tb2JpbGUtaGVhZGVyIHtcbiAgICAgICAgICAgIGJhY2tncm91bmQ6ICMyMTIwMjA7XG4gICAgICAgIH1cbiAgICAgICAgLm1haW4ge1xuICAgICAgICAgICAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgICAgICAgfVxuXG4gICAgICAgIC5uYXY+bGl7XG4gICAgICAgICAgICBtYXJnaW46IDQwcHggMDtcbiAgICAgICAgfVxuICAgIH1cbiAgICAubmF2YmFyLXRvZ2dsZXtcbiAgICAgICAgcGFkZGluZzogMTNweCA2cHg7XG4gICAgfVxuICAgIC5uYXZiYXItZGVmYXVsdCAubmF2YmFyLXRvZ2dsZXtcbiAgICAgICAgYm9yZGVyOiBub25lO1xuICAgIH1cbiAgICAubmF2YmFyLWRlZmF1bHQgLm5hdmJhci10b2dnbGU6Zm9jdXMsIC5uYXZiYXItZGVmYXVsdCAubmF2YmFyLXRvZ2dsZTpob3ZlciB7XG4gICAgICAgIGJhY2tncm91bmQtY29sb3I6ICMyMTIwMjA7XG4gICAgfVxuICAgIC8qKioqKioqKioqKioqKioqIG1vYmlsZSBzcGVjYWlsIGVuZCAqKioqKioqKioqKioqKioqKioqKioqKioqKioqKi9cbiJdLCJzb3VyY2VSb290IjoiIn0= */</style></head><body style="font-size: 12px;"><div id="app"><div class="health"><div class="healthheader"><nav class="navbar navbar-default navbar-fixed-top fixed-topone"><div class="container-fluid"><div class="navbar-header mobile-header"><button type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" class="navbar-toggle collapsed "><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJUAAAAoCAYAAAD39rjkAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QkQyQUY5MkY1REIwMTFFODk0NDc5RUJCM0JFREVDNUQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QkQyQUY5MzA1REIwMTFFODk0NDc5RUJCM0JFREVDNUQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpCRDJBRjkyRDVEQjAxMUU4OTQ0NzlFQkIzQkVERUM1RCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpCRDJBRjkyRTVEQjAxMUU4OTQ0NzlFQkIzQkVERUM1RCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PoUPVjIAAArZSURBVHja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" class="navbar-brand "></div> <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse"><ul class="nav navbar-nav navbar-right"><li><a href="javascript:void(0)"><span class="spanborder active">首页</span></a> <!----></li><li><a href="javascript:void(0)"><span class="spanborder">产品与服务</span></a> <ul aria-labelledby="dropdownMenu1" class="dropdownMenu mobile-hidden dropdownMenu1"><li><a href="javascript:void(0)">数据智能
+                                </a> <div class="childText">
+                                    智能营销平台
+                                </div><div class="childText">
+                                    数据洞察平台
+                                </div></li><li><a href="javascript:void(0)">健康医疗
+                                </a> <div class="childText">
+                                    健康医疗服务平台
+                                </div><div class="childText">
+                                    健康管理平台
+                                </div></li><li><a href="javascript:void(0)">保险科技
+                                </a> <div class="childText">
+                                    移动展业平台
+                                </div><div class="childText">
+                                    分布式电商平台
+                                </div></li> <!----><!----><!----></ul></li><li><a href="javascript:void(0)"><span class="spanborder">健康头条</span></a> <!----></li><li><a href="javascript:void(0)"><span class="spanborder">公司动态</span></a> <!----></li><li><a href="javascript:void(0)"><span class="spanborder">关于我们</span></a> <ul aria-labelledby="dropdownMenu1" class="dropdownMenu mobile-hidden dropdownMenu"><!----><!----><!----><!----><!----><!----> <li><a href="javascript:void(0)">品牌理念
+                                </a> </li><li><a href="javascript:void(0)">公司简介
+                                </a> </li><li><a href="javascript:void(0)">发展历程
+                                </a> </li><li><a href="javascript:void(0)">荣获奖项
+                                </a> </li><li><a href="javascript:void(0)">合作伙伴
+                                </a> </li><li><a href="javascript:void(0)">加入我们
+                                </a> </li></ul></li></ul></div></div></nav></div> <div class="container healthServer mobile-hidden"><div class="row"><div class="col-sm-3 col-md-3 col-lg-3"><div class="textbox"><div class="backicon" style="background-image: url(&quot;https://ifxj-upload.oss-cn-shenzhen.aliyuncs.com/spider/6de935c03f12f614412405ca9a255aff.jpeg&quot;); background-repeat: no-repeat; background-position: center center;"></div> <div class="lable clear"><div class="fl"><span class="lableIcon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MDk5MzRCMzdBRkZGMTFFOEFERkJBQTNBNTBFQjA5OUUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MDk5MzRCMzhBRkZGMTFFOEFERkJBQTNBNTBFQjA5OUUiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDowOTkzNEIzNUFGRkYxMUU4QURGQkFBM0E1MEVCMDk5RSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDowOTkzNEIzNkFGRkYxMUU4QURGQkFBM0E1MEVCMDk5RSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PtH9MUMAAAEXSURBVHjaYvz//z8DLQHjkLeAAWQBEr4GxB+B+A0QnwDiViDWQFMDw0xAHAnEa4D4ARD/BuLvQHwPWR26pj//McFfIJ4BxBxI6viB+PB/7OA3Pgue/ccN9gMxK1TdOjzqHuCzYMd//KAGiD0IqFmGz4JkAppfAfFxPPL/gNgKnwWgILj6n3zQiJ4YsKUOFSB+QqLBd4A4BltqY8CRBEWAeAXUy+hgOxDbAHEgND5UcZgBxoQymhYQxwCxMRDzAzEfEJ8H4mha5eRMILahlgWzgDgETYwdiFmA+CsW9SCLr6ELsuCxnBuIBXHIsWERY8amkImBxmDUAoos+EyiWV+IqXCQsToQXyaimPgGxP3k5uTRSp8BIMAAZBocyV2Q3ssAAAAASUVORK5CYII="></span> <span class="lableText">养生</span></div></div> <p id="leadone0" class="lead">12.3%，婴幼儿过敏发病率还在快速上升</p></div></div><div class="col-sm-3 col-md-3 col-lg-3"><div class="textbox"><div class="backicon" style="background-image: url(&quot;https://ifxj-upload.oss-cn-shenzhen.aliyuncs.com/spider/79dff1348ba223efe585c751173ab88d.jpeg&quot;); background-repeat: no-repeat; background-position: center center;"></div> <div class="lable clear"><div class="fl"><span class="lableIcon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RDRGRTlENDdCMDE1MTFFOEFERkJBQTNBNTBFQjA5OUUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RDRGRTlENDhCMDE1MTFFOEFERkJBQTNBNTBFQjA5OUUiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpENEZFOUQ0NUIwMTUxMUU4QURGQkFBM0E1MEVCMDk5RSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpENEZFOUQ0NkIwMTUxMUU4QURGQkFBM0E1MEVCMDk5RSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Prk0cXoAAAGGSURBVHja1Na7SgNBFIDhrEqCWGgUhIgI2mgKW1FsFMQmXkB7G30CxcLeJiQ+gHjBMgg2YkQtbKzjtbATQVEIXlAjKoLrv3iEYcnsZlZSOPDB7swkZ3Lm7Gws27ZD5WwVoTI3kwBRzKHSKIKTIh8d2MCb/dNe5T5ewmd9A/SgYBdvTn//XwLU48b2bneIegXw2oNJxHwy3ICpIHuwhA9lpb04k+tZLCpjzrxl0xQ9ulJxjE+5vkTeNf5gmqIx5JT7AhaQRAY1ypgzbzxImQ4pKzxBnfQnXKsfDlpFFnaUL3rGOb6Uvl2ZZxygGmnEkNWU6DaakERYF6BKk7lRzGAQCcQxgkbksYl77KMdR7I3Je9BSlnpFTpdqZvGuzInZVpFapU04wADcp+Riopo5gc6TWuRxQTmcf3X4/qpSF8Ya7IX3ThVxl50AXSbfKjpt+QXtKAP65K6nOmDFsGFz0m6JSdpWsra+EHrkjPGq+0FfdB+tWG1yHvhFito9XvhWP/+X8W3AAMAwnTelIwRreUAAAAASUVORK5CYII="></span> <span class="lableText">育儿</span></div></div> <p id="leadone1" class="lead">孩子每天爬+躺+舔的彩色地垫，竟然这么毒！</p></div></div><div class="col-sm-3 col-md-3 col-lg-3"><div class="textbox"><div class="backicon" style="background-image: url(&quot;https://ifxj-upload.oss-cn-shenzhen.aliyuncs.com/spider/91a8d22d9dabcee811b7cc1202fbf477.jpeg&quot;); background-repeat: no-repeat; background-position: center center;"></div> <div class="lable clear"><div class="fl"><span class="lableIcon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MDk5MzRCMzdBRkZGMTFFOEFERkJBQTNBNTBFQjA5OUUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MDk5MzRCMzhBRkZGMTFFOEFERkJBQTNBNTBFQjA5OUUiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDowOTkzNEIzNUFGRkYxMUU4QURGQkFBM0E1MEVCMDk5RSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDowOTkzNEIzNkFGRkYxMUU4QURGQkFBM0E1MEVCMDk5RSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PtH9MUMAAAEXSURBVHjaYvz//z8DLQHjkLeAAWQBEr4GxB+B+A0QnwDiViDWQFMDw0xAHAnEa4D4ARD/BuLvQHwPWR26pj//McFfIJ4BxBxI6viB+PB/7OA3Pgue/ccN9gMxK1TdOjzqHuCzYMd//KAGiD0IqFmGz4JkAppfAfFxPPL/gNgKnwWgILj6n3zQiJ4YsKUOFSB+QqLBd4A4BltqY8CRBEWAeAXUy+hgOxDbAHEgND5UcZgBxoQymhYQxwCxMRDzAzEfEJ8H4mha5eRMILahlgWzgDgETYwdiFmA+CsW9SCLr6ELsuCxnBuIBXHIsWERY8amkImBxmDUAoos+EyiWV+IqXCQsToQXyaimPgGxP3k5uTRSp8BIMAAZBocyV2Q3ssAAAAASUVORK5CYII="></span> <span class="lableText">养生</span></div></div> <p id="leadone2" class="lead">癌症是种情绪病，坏情绪积累到一定程度，就会反应在身体上。肿瘤学专家滕理送教你防癌九字诀！| 养生大咖170</p></div></div><div class="col-sm-3 col-md-3 col-lg-3"><div class="textbox"><div class="backicon" style="background-image: url(&quot;https://ifxj-upload.oss-cn-shenzhen.aliyuncs.com/spider/66032f6257556b38e3ddf476e00ea656.jpeg&quot;); background-repeat: no-repeat; background-position: center center;"></div> <div class="lable clear"><div class="fl"><span class="lableIcon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MDk5MzRCMzdBRkZGMTFFOEFERkJBQTNBNTBFQjA5OUUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MDk5MzRCMzhBRkZGMTFFOEFERkJBQTNBNTBFQjA5OUUiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDowOTkzNEIzNUFGRkYxMUU4QURGQkFBM0E1MEVCMDk5RSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDowOTkzNEIzNkFGRkYxMUU4QURGQkFBM0E1MEVCMDk5RSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PtH9MUMAAAEXSURBVHjaYvz//z8DLQHjkLeAAWQBEr4GxB+B+A0QnwDiViDWQFMDw0xAHAnEa4D4ARD/BuLvQHwPWR26pj//McFfIJ4BxBxI6viB+PB/7OA3Pgue/ccN9gMxK1TdOjzqHuCzYMd//KAGiD0IqFmGz4JkAppfAfFxPPL/gNgKnwWgILj6n3zQiJ4YsKUOFSB+QqLBd4A4BltqY8CRBEWAeAXUy+hgOxDbAHEgND5UcZgBxoQymhYQxwCxMRDzAzEfEJ8H4mha5eRMILahlgWzgDgETYwdiFmA+CsW9SCLr6ELsuCxnBuIBXHIsWERY8amkImBxmDUAoos+EyiWV+IqXCQsToQXyaimPgGxP3k5uTRSp8BIMAAZBocyV2Q3ssAAAAASUVORK5CYII="></span> <span class="lableText">养生</span></div></div> <p id="leadone3" class="lead">10月27、28日,特邀北京著名中医专家坐诊银海世医堂!免费义诊仅限两天!预约电话:85707878</p></div></div></div></div> <div class=" healthServer pc-hidden"><div class="clear"><div class="textbox fl"><div class="backicon" style="background-image: url(&quot;https://ifxj-upload.oss-cn-shenzhen.aliyuncs.com/spider/6de935c03f12f614412405ca9a255aff.jpeg&quot;); background-repeat: no-repeat; background-position: center center;"></div> <div class="lable clear"><div class="fl"><span class="lableIcon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MDk5MzRCMzdBRkZGMTFFOEFERkJBQTNBNTBFQjA5OUUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MDk5MzRCMzhBRkZGMTFFOEFERkJBQTNBNTBFQjA5OUUiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDowOTkzNEIzNUFGRkYxMUU4QURGQkFBM0E1MEVCMDk5RSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDowOTkzNEIzNkFGRkYxMUU4QURGQkFBM0E1MEVCMDk5RSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PtH9MUMAAAEXSURBVHjaYvz//z8DLQHjkLeAAWQBEr4GxB+B+A0QnwDiViDWQFMDw0xAHAnEa4D4ARD/BuLvQHwPWR26pj//McFfIJ4BxBxI6viB+PB/7OA3Pgue/ccN9gMxK1TdOjzqHuCzYMd//KAGiD0IqFmGz4JkAppfAfFxPPL/gNgKnwWgILj6n3zQiJ4YsKUOFSB+QqLBd4A4BltqY8CRBEWAeAXUy+hgOxDbAHEgND5UcZgBxoQymhYQxwCxMRDzAzEfEJ8H4mha5eRMILahlgWzgDgETYwdiFmA+CsW9SCLr6ELsuCxnBuIBXHIsWERY8amkImBxmDUAoos+EyiWV+IqXCQsToQXyaimPgGxP3k5uTRSp8BIMAAZBocyV2Q3ssAAAAASUVORK5CYII="></span> <span class="lableText">养生</span></div></div> <p class="lead">12.3%，婴幼儿过敏发病率还在快速上升</p></div><div class="textbox fr"><div class="backicon" style="background-image: url(&quot;https://ifxj-upload.oss-cn-shenzhen.aliyuncs.com/spider/79dff1348ba223efe585c751173ab88d.jpeg&quot;); background-repeat: no-repeat; background-position: center center;"></div> <div class="lable clear"><div class="fl"><span class="lableIcon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RDRGRTlENDdCMDE1MTFFOEFERkJBQTNBNTBFQjA5OUUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RDRGRTlENDhCMDE1MTFFOEFERkJBQTNBNTBFQjA5OUUiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpENEZFOUQ0NUIwMTUxMUU4QURGQkFBM0E1MEVCMDk5RSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpENEZFOUQ0NkIwMTUxMUU4QURGQkFBM0E1MEVCMDk5RSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Prk0cXoAAAGGSURBVHja1Na7SgNBFIDhrEqCWGgUhIgI2mgKW1FsFMQmXkB7G30CxcLeJiQ+gHjBMgg2YkQtbKzjtbATQVEIXlAjKoLrv3iEYcnsZlZSOPDB7swkZ3Lm7Gws27ZD5WwVoTI3kwBRzKHSKIKTIh8d2MCb/dNe5T5ewmd9A/SgYBdvTn//XwLU48b2bneIegXw2oNJxHwy3ICpIHuwhA9lpb04k+tZLCpjzrxl0xQ9ulJxjE+5vkTeNf5gmqIx5JT7AhaQRAY1ypgzbzxImQ4pKzxBnfQnXKsfDlpFFnaUL3rGOb6Uvl2ZZxygGmnEkNWU6DaakERYF6BKk7lRzGAQCcQxgkbksYl77KMdR7I3Je9BSlnpFTpdqZvGuzInZVpFapU04wADcp+Riopo5gc6TWuRxQTmcf3X4/qpSF8Ya7IX3ThVxl50AXSbfKjpt+QXtKAP65K6nOmDFsGFz0m6JSdpWsra+EHrkjPGq+0FfdB+tWG1yHvhFito9XvhWP/+X8W3AAMAwnTelIwRreUAAAAASUVORK5CYII="></span> <span class="lableText">育儿</span></div></div> <p class="lead">孩子每天爬+躺+舔的彩色地垫，竟然这么毒！</p></div><div class="textbox fl"><div class="backicon" style="background-image: url(&quot;https://ifxj-upload.oss-cn-shenzhen.aliyuncs.com/spider/91a8d22d9dabcee811b7cc1202fbf477.jpeg&quot;); background-repeat: no-repeat; background-position: center center;"></div> <div class="lable clear"><div class="fl"><span class="lableIcon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MDk5MzRCMzdBRkZGMTFFOEFERkJBQTNBNTBFQjA5OUUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MDk5MzRCMzhBRkZGMTFFOEFERkJBQTNBNTBFQjA5OUUiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDowOTkzNEIzNUFGRkYxMUU4QURGQkFBM0E1MEVCMDk5RSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDowOTkzNEIzNkFGRkYxMUU4QURGQkFBM0E1MEVCMDk5RSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PtH9MUMAAAEXSURBVHjaYvz//z8DLQHjkLeAAWQBEr4GxB+B+A0QnwDiViDWQFMDw0xAHAnEa4D4ARD/BuLvQHwPWR26pj//McFfIJ4BxBxI6viB+PB/7OA3Pgue/ccN9gMxK1TdOjzqHuCzYMd//KAGiD0IqFmGz4JkAppfAfFxPPL/gNgKnwWgILj6n3zQiJ4YsKUOFSB+QqLBd4A4BltqY8CRBEWAeAXUy+hgOxDbAHEgND5UcZgBxoQymhYQxwCxMRDzAzEfEJ8H4mha5eRMILahlgWzgDgETYwdiFmA+CsW9SCLr6ELsuCxnBuIBXHIsWERY8amkImBxmDUAoos+EyiWV+IqXCQsToQXyaimPgGxP3k5uTRSp8BIMAAZBocyV2Q3ssAAAAASUVORK5CYII="></span> <span class="lableText">养生</span></div></div> <p class="lead">癌症是种情绪病，坏情绪积累到一定程度，就会反应在身体上。肿瘤学专家滕理送教你防癌九字诀！| 养生大咖170</p></div><div class="textbox fr"><div class="backicon" style="background-image: url(&quot;https://ifxj-upload.oss-cn-shenzhen.aliyuncs.com/spider/66032f6257556b38e3ddf476e00ea656.jpeg&quot;); background-repeat: no-repeat; background-position: center center;"></div> <div class="lable clear"><div class="fl"><span class="lableIcon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MDk5MzRCMzdBRkZGMTFFOEFERkJBQTNBNTBFQjA5OUUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MDk5MzRCMzhBRkZGMTFFOEFERkJBQTNBNTBFQjA5OUUiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDowOTkzNEIzNUFGRkYxMUU4QURGQkFBM0E1MEVCMDk5RSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDowOTkzNEIzNkFGRkYxMUU4QURGQkFBM0E1MEVCMDk5RSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PtH9MUMAAAEXSURBVHjaYvz//z8DLQHjkLeAAWQBEr4GxB+B+A0QnwDiViDWQFMDw0xAHAnEa4D4ARD/BuLvQHwPWR26pj//McFfIJ4BxBxI6viB+PB/7OA3Pgue/ccN9gMxK1TdOjzqHuCzYMd//KAGiD0IqFmGz4JkAppfAfFxPPL/gNgKnwWgILj6n3zQiJ4YsKUOFSB+QqLBd4A4BltqY8CRBEWAeAXUy+hgOxDbAHEgND5UcZgBxoQymhYQxwCxMRDzAzEfEJ8H4mha5eRMILahlgWzgDgETYwdiFmA+CsW9SCLr6ELsuCxnBuIBXHIsWERY8amkImBxmDUAoos+EyiWV+IqXCQsToQXyaimPgGxP3k5uTRSp8BIMAAZBocyV2Q3ssAAAAASUVORK5CYII="></span> <span class="lableText">养生</span></div></div> <p class="lead">10月27、28日,特邀北京著名中医专家坐诊银海世医堂!免费义诊仅限两天!预约电话:85707878</p></div></div></div> <div class="healthcontent mobile-hidden"><div class="healthBox"><div class="healthVoice"><div class="title">健康之声</div> <div class="clear"><div class="textbox fl"><div class="lable clear"><div class="fl"><span class="lableIcon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MDY0NjU1MzBCMDE2MTFFOEFERkJBQTNBNTBFQjA5OUUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6Mjk5MkRFRTZCMDE2MTFFOEFERkJBQTNBNTBFQjA5OUUiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDowNjQ2NTUyRUIwMTYxMUU4QURGQkFBM0E1MEVCMDk5RSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDowNjQ2NTUyRkIwMTYxMUU4QURGQkFBM0E1MEVCMDk5RSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PnmCj2EAAAGXSURBVHjazJbPK0RRFMdnxCyG7CxsJv4KmmwIhbJRozFlYW9Nk59jiv/AQlkQZUlsGMZCmL9Czd8ghcL31PfV6Tr3vcfMyKlPnXn3vXPOPefccyeZru4lWiltiRZLXAej4Ao8E9FHmuVgBVzSSScRvQJWQfK3DtqBFGjLY0SelcAhSIUZsaQLnIBJ9awOatQHQIZ6AfSAGaYvcgcSzaljXKQIcqTorI3zm1SUA9n2gaeAnx49EPlm302n62AdzDbQlQUW3nQwBtaa0PobYNgq8rLa3hPb812t15R+x1oE0gHKoJ82lkDVdTCo9AdwHBJlnWiZogOR7J+NCr2DR9U9EsGckaIg6gzPgk5RVv2+txxssziSwz5wZHRIkLYhY1238I6VogrbtFGRQ3jrq0E5JLI4squjtxzI9hbARUS9uo31M7D4bSJ6brQ0ONcHxhl2UoNetXYNpsFL3GkqL05wLuVU52SMd2XqzoO3n94HryDPo28Ntw82Rd5nPM5BEyOb6gYLrswKn5U8ziNT5MoN+X//Kr4EGABC81BECh0XWQAAAABJRU5ErkJggg=="></span> <span class="lableText">健康</span></div> <div class="fr"><span class="auther"></span> <span class="time">2018年10月24日 </span></div></div> <p class="lead">这样练，瞬间长高 2 公分，还年轻 5 岁！</p> <div class="backicon" style="background-image: url(&quot;https://ifxj-upload.oss-cn-shenzhen.aliyuncs.com/spider/777e84949e3e74e523972c7b04e8c238.jpeg&quot;); background-repeat: no-repeat; background-position: center center;"></div></div><div class="textbox fr"><div class="lable clear"><div class="fl"><span class="lableIcon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MDY0NjU1MzBCMDE2MTFFOEFERkJBQTNBNTBFQjA5OUUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6Mjk5MkRFRTZCMDE2MTFFOEFERkJBQTNBNTBFQjA5OUUiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDowNjQ2NTUyRUIwMTYxMUU4QURGQkFBM0E1MEVCMDk5RSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDowNjQ2NTUyRkIwMTYxMUU4QURGQkFBM0E1MEVCMDk5RSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PnmCj2EAAAGXSURBVHjazJbPK0RRFMdnxCyG7CxsJv4KmmwIhbJRozFlYW9Nk59jiv/AQlkQZUlsGMZCmL9Czd8ghcL31PfV6Tr3vcfMyKlPnXn3vXPOPefccyeZru4lWiltiRZLXAej4Ao8E9FHmuVgBVzSSScRvQJWQfK3DtqBFGjLY0SelcAhSIUZsaQLnIBJ9awOatQHQIZ6AfSAGaYvcgcSzaljXKQIcqTorI3zm1SUA9n2gaeAnx49EPlm302n62AdzDbQlQUW3nQwBtaa0PobYNgq8rLa3hPb812t15R+x1oE0gHKoJ82lkDVdTCo9AdwHBJlnWiZogOR7J+NCr2DR9U9EsGckaIg6gzPgk5RVv2+txxssziSwz5wZHRIkLYhY1238I6VogrbtFGRQ3jrq0E5JLI4squjtxzI9hbARUS9uo31M7D4bSJ6brQ0ONcHxhl2UoNetXYNpsFL3GkqL05wLuVU52SMd2XqzoO3n94HryDPo28Ntw82Rd5nPM5BEyOb6gYLrswKn5U8ziNT5MoN+X//Kr4EGABC81BECh0XWQAAAABJRU5ErkJggg=="></span> <span class="lableText">健康</span></div> <div class="fr"><span class="auther"></span> <span class="time">2018年10月24日 </span></div></div> <p class="lead">数羊不能帮助入眠？试试以下几种方法</p> <div class="backicon" style="background-image: url(&quot;https://ifxj-upload.oss-cn-shenzhen.aliyuncs.com/spider/98ec5742827bb933a3561c22ac8b9b34.jpeg&quot;); background-repeat: no-repeat; background-position: center center;"></div></div><div class="textbox fl"><div class="lable clear"><div class="fl"><span class="lableIcon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MDY0NjU1MzBCMDE2MTFFOEFERkJBQTNBNTBFQjA5OUUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6Mjk5MkRFRTZCMDE2MTFFOEFERkJBQTNBNTBFQjA5OUUiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDowNjQ2NTUyRUIwMTYxMUU4QURGQkFBM0E1MEVCMDk5RSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDowNjQ2NTUyRkIwMTYxMUU4QURGQkFBM0E1MEVCMDk5RSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PnmCj2EAAAGXSURBVHjazJbPK0RRFMdnxCyG7CxsJv4KmmwIhbJRozFlYW9Nk59jiv/AQlkQZUlsGMZCmL9Czd8ghcL31PfV6Tr3vcfMyKlPnXn3vXPOPefccyeZru4lWiltiRZLXAej4Ao8E9FHmuVgBVzSSScRvQJWQfK3DtqBFGjLY0SelcAhSIUZsaQLnIBJ9awOatQHQIZ6AfSAGaYvcgcSzaljXKQIcqTorI3zm1SUA9n2gaeAnx49EPlm302n62AdzDbQlQUW3nQwBtaa0PobYNgq8rLa3hPb812t15R+x1oE0gHKoJ82lkDVdTCo9AdwHBJlnWiZogOR7J+NCr2DR9U9EsGckaIg6gzPgk5RVv2+txxssziSwz5wZHRIkLYhY1238I6VogrbtFGRQ3jrq0E5JLI4squjtxzI9hbARUS9uo31M7D4bSJ6brQ0ONcHxhl2UoNetXYNpsFL3GkqL05wLuVU52SMd2XqzoO3n94HryDPo28Ntw82Rd5nPM5BEyOb6gYLrswKn5U8ziNT5MoN+X//Kr4EGABC81BECh0XWQAAAABJRU5ErkJggg=="></span> <span class="lableText">健康</span></div> <div class="fr"><span class="auther"></span> <span class="time">2018年10月24日 </span></div></div> <p class="lead">长假即将结束，唤醒身体最有效的运动</p> <div class="backicon" style="background-image: url(&quot;https://ifxj-upload.oss-cn-shenzhen.aliyuncs.com/spider/8654e0ca508bd98829751a9a9f1695db.jpeg&quot;); background-repeat: no-repeat; background-position: center center;"></div></div><div class="textbox fr"><div class="lable clear"><div class="fl"><span class="lableIcon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MDY0NjU1MzBCMDE2MTFFOEFERkJBQTNBNTBFQjA5OUUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6Mjk5MkRFRTZCMDE2MTFFOEFERkJBQTNBNTBFQjA5OUUiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDowNjQ2NTUyRUIwMTYxMUU4QURGQkFBM0E1MEVCMDk5RSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDowNjQ2NTUyRkIwMTYxMUU4QURGQkFBM0E1MEVCMDk5RSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PnmCj2EAAAGXSURBVHjazJbPK0RRFMdnxCyG7CxsJv4KmmwIhbJRozFlYW9Nk59jiv/AQlkQZUlsGMZCmL9Czd8ghcL31PfV6Tr3vcfMyKlPnXn3vXPOPefccyeZru4lWiltiRZLXAej4Ao8E9FHmuVgBVzSSScRvQJWQfK3DtqBFGjLY0SelcAhSIUZsaQLnIBJ9awOatQHQIZ6AfSAGaYvcgcSzaljXKQIcqTorI3zm1SUA9n2gaeAnx49EPlm302n62AdzDbQlQUW3nQwBtaa0PobYNgq8rLa3hPb812t15R+x1oE0gHKoJ82lkDVdTCo9AdwHBJlnWiZogOR7J+NCr2DR9U9EsGckaIg6gzPgk5RVv2+txxssziSwz5wZHRIkLYhY1238I6VogrbtFGRQ3jrq0E5JLI4squjtxzI9hbARUS9uo31M7D4bSJ6brQ0ONcHxhl2UoNetXYNpsFL3GkqL05wLuVU52SMd2XqzoO3n94HryDPo28Ntw82Rd5nPM5BEyOb6gYLrswKn5U8ziNT5MoN+X//Kr4EGABC81BECh0XWQAAAABJRU5ErkJggg=="></span> <span class="lableText">健康</span></div> <div class="fr"><span class="auther"></span> <span class="time">2018年10月24日 </span></div></div> <p class="lead">十一长假，美食健康两不误的节日饮食指南</p> <div class="backicon" style="background-image: url(&quot;https://ifxj-upload.oss-cn-shenzhen.aliyuncs.com/spider/36b97d6cbf28fce01585a349edeac9d6.jpeg&quot;); background-repeat: no-repeat; background-position: center center;"></div></div></div></div> <div class="healthNews"><div class="title">
+                    健康新闻
+                </div> <div class="textbox"><div class="lable clear"><div class="fl"><span class="lableIcon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MDY0NjU1MzBCMDE2MTFFOEFERkJBQTNBNTBFQjA5OUUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6Mjk5MkRFRTZCMDE2MTFFOEFERkJBQTNBNTBFQjA5OUUiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDowNjQ2NTUyRUIwMTYxMUU4QURGQkFBM0E1MEVCMDk5RSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDowNjQ2NTUyRkIwMTYxMUU4QURGQkFBM0E1MEVCMDk5RSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PnmCj2EAAAGXSURBVHjazJbPK0RRFMdnxCyG7CxsJv4KmmwIhbJRozFlYW9Nk59jiv/AQlkQZUlsGMZCmL9Czd8ghcL31PfV6Tr3vcfMyKlPnXn3vXPOPefccyeZru4lWiltiRZLXAej4Ao8E9FHmuVgBVzSSScRvQJWQfK3DtqBFGjLY0SelcAhSIUZsaQLnIBJ9awOatQHQIZ6AfSAGaYvcgcSzaljXKQIcqTorI3zm1SUA9n2gaeAnx49EPlm302n62AdzDbQlQUW3nQwBtaa0PobYNgq8rLa3hPb812t15R+x1oE0gHKoJ82lkDVdTCo9AdwHBJlnWiZogOR7J+NCr2DR9U9EsGckaIg6gzPgk5RVv2+txxssziSwz5wZHRIkLYhY1238I6VogrbtFGRQ3jrq0E5JLI4squjtxzI9hbARUS9uo31M7D4bSJ6brQ0ONcHxhl2UoNetXYNpsFL3GkqL05wLuVU52SMd2XqzoO3n94HryDPo28Ntw82Rd5nPM5BEyOb6gYLrswKn5U8ziNT5MoN+X//Kr4EGABC81BECh0XWQAAAABJRU5ErkJggg=="></span> <span class="lableText">健康</span></div> <div class="fr"><span class="auther"></span> <span class="time">2018年10月25日 </span></div></div> <p class="lead">布局处方药，药店准备好了吗？</p> <div class="backicon" style="background-image: url(&quot;https://ifxj-upload.oss-cn-shenzhen.aliyuncs.com/spider/fd0cdc8616064337d4565e3b06318e59.jpg&quot;); background-repeat: no-repeat; background-position: center center;"></div></div><div class="textbox"><div class="lable clear"><div class="fl"><span class="lableIcon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MDY0NjU1MzBCMDE2MTFFOEFERkJBQTNBNTBFQjA5OUUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6Mjk5MkRFRTZCMDE2MTFFOEFERkJBQTNBNTBFQjA5OUUiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDowNjQ2NTUyRUIwMTYxMUU4QURGQkFBM0E1MEVCMDk5RSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDowNjQ2NTUyRkIwMTYxMUU4QURGQkFBM0E1MEVCMDk5RSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PnmCj2EAAAGXSURBVHjazJbPK0RRFMdnxCyG7CxsJv4KmmwIhbJRozFlYW9Nk59jiv/AQlkQZUlsGMZCmL9Czd8ghcL31PfV6Tr3vcfMyKlPnXn3vXPOPefccyeZru4lWiltiRZLXAej4Ao8E9FHmuVgBVzSSScRvQJWQfK3DtqBFGjLY0SelcAhSIUZsaQLnIBJ9awOatQHQIZ6AfSAGaYvcgcSzaljXKQIcqTorI3zm1SUA9n2gaeAnx49EPlm302n62AdzDbQlQUW3nQwBtaa0PobYNgq8rLa3hPb812t15R+x1oE0gHKoJ82lkDVdTCo9AdwHBJlnWiZogOR7J+NCr2DR9U9EsGckaIg6gzPgk5RVv2+txxssziSwz5wZHRIkLYhY1238I6VogrbtFGRQ3jrq0E5JLI4squjtxzI9hbARUS9uo31M7D4bSJ6brQ0ONcHxhl2UoNetXYNpsFL3GkqL05wLuVU52SMd2XqzoO3n94HryDPo28Ntw82Rd5nPM5BEyOb6gYLrswKn5U8ziNT5MoN+X//Kr4EGABC81BECh0XWQAAAABJRU5ErkJggg=="></span> <span class="lableText">健康</span></div> <div class="fr"><span class="auther"></span> <span class="time">2018年10月25日 </span></div></div> <p class="lead">医疗物联网的应用与趋势</p> <div class="backicon" style="background-image: url(&quot;https://ifxj-upload.oss-cn-shenzhen.aliyuncs.com/spider/c02e07acafa8739902318ad899e2830e.jpg&quot;); background-repeat: no-repeat; background-position: center center;"></div></div></div></div></div> <div class="healthcontent pc-hidden"><div class="healthBox"><div class="healthVoice"><div class="title">健康之声</div> <div class="textbox"><div class="lable clear"><div class="fl"><span class="lableIcon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MDY0NjU1MzBCMDE2MTFFOEFERkJBQTNBNTBFQjA5OUUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6Mjk5MkRFRTZCMDE2MTFFOEFERkJBQTNBNTBFQjA5OUUiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDowNjQ2NTUyRUIwMTYxMUU4QURGQkFBM0E1MEVCMDk5RSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDowNjQ2NTUyRkIwMTYxMUU4QURGQkFBM0E1MEVCMDk5RSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PnmCj2EAAAGXSURBVHjazJbPK0RRFMdnxCyG7CxsJv4KmmwIhbJRozFlYW9Nk59jiv/AQlkQZUlsGMZCmL9Czd8ghcL31PfV6Tr3vcfMyKlPnXn3vXPOPefccyeZru4lWiltiRZLXAej4Ao8E9FHmuVgBVzSSScRvQJWQfK3DtqBFGjLY0SelcAhSIUZsaQLnIBJ9awOatQHQIZ6AfSAGaYvcgcSzaljXKQIcqTorI3zm1SUA9n2gaeAnx49EPlm302n62AdzDbQlQUW3nQwBtaa0PobYNgq8rLa3hPb812t15R+x1oE0gHKoJ82lkDVdTCo9AdwHBJlnWiZogOR7J+NCr2DR9U9EsGckaIg6gzPgk5RVv2+txxssziSwz5wZHRIkLYhY1238I6VogrbtFGRQ3jrq0E5JLI4squjtxzI9hbARUS9uo31M7D4bSJ6brQ0ONcHxhl2UoNetXYNpsFL3GkqL05wLuVU52SMd2XqzoO3n94HryDPo28Ntw82Rd5nPM5BEyOb6gYLrswKn5U8ziNT5MoN+X//Kr4EGABC81BECh0XWQAAAABJRU5ErkJggg=="></span> <span class="lableText">健康</span></div> <div class="fr"><span class="auther"></span> <span class="time">2018年10月24日 </span></div></div> <p class="lead">这样练，瞬间长高 2 公分，还年轻 5 岁！</p> <div class="backicon" style="background-image: url(&quot;https://ifxj-upload.oss-cn-shenzhen.aliyuncs.com/spider/777e84949e3e74e523972c7b04e8c238.jpeg&quot;); background-repeat: no-repeat; background-position: center center;"></div></div><div class="textbox"><div class="lable clear"><div class="fl"><span class="lableIcon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MDY0NjU1MzBCMDE2MTFFOEFERkJBQTNBNTBFQjA5OUUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6Mjk5MkRFRTZCMDE2MTFFOEFERkJBQTNBNTBFQjA5OUUiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDowNjQ2NTUyRUIwMTYxMUU4QURGQkFBM0E1MEVCMDk5RSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDowNjQ2NTUyRkIwMTYxMUU4QURGQkFBM0E1MEVCMDk5RSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PnmCj2EAAAGXSURBVHjazJbPK0RRFMdnxCyG7CxsJv4KmmwIhbJRozFlYW9Nk59jiv/AQlkQZUlsGMZCmL9Czd8ghcL31PfV6Tr3vcfMyKlPnXn3vXPOPefccyeZru4lWiltiRZLXAej4Ao8E9FHmuVgBVzSSScRvQJWQfK3DtqBFGjLY0SelcAhSIUZsaQLnIBJ9awOatQHQIZ6AfSAGaYvcgcSzaljXKQIcqTorI3zm1SUA9n2gaeAnx49EPlm302n62AdzDbQlQUW3nQwBtaa0PobYNgq8rLa3hPb812t15R+x1oE0gHKoJ82lkDVdTCo9AdwHBJlnWiZogOR7J+NCr2DR9U9EsGckaIg6gzPgk5RVv2+txxssziSwz5wZHRIkLYhY1238I6VogrbtFGRQ3jrq0E5JLI4squjtxzI9hbARUS9uo31M7D4bSJ6brQ0ONcHxhl2UoNetXYNpsFL3GkqL05wLuVU52SMd2XqzoO3n94HryDPo28Ntw82Rd5nPM5BEyOb6gYLrswKn5U8ziNT5MoN+X//Kr4EGABC81BECh0XWQAAAABJRU5ErkJggg=="></span> <span class="lableText">健康</span></div> <div class="fr"><span class="auther"></span> <span class="time">2018年10月24日 </span></div></div> <p class="lead">数羊不能帮助入眠？试试以下几种方法</p> <div class="backicon" style="background-image: url(&quot;https://ifxj-upload.oss-cn-shenzhen.aliyuncs.com/spider/98ec5742827bb933a3561c22ac8b9b34.jpeg&quot;); background-repeat: no-repeat; background-position: center center;"></div></div><div class="textbox"><div class="lable clear"><div class="fl"><span class="lableIcon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MDY0NjU1MzBCMDE2MTFFOEFERkJBQTNBNTBFQjA5OUUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6Mjk5MkRFRTZCMDE2MTFFOEFERkJBQTNBNTBFQjA5OUUiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDowNjQ2NTUyRUIwMTYxMUU4QURGQkFBM0E1MEVCMDk5RSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDowNjQ2NTUyRkIwMTYxMUU4QURGQkFBM0E1MEVCMDk5RSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PnmCj2EAAAGXSURBVHjazJbPK0RRFMdnxCyG7CxsJv4KmmwIhbJRozFlYW9Nk59jiv/AQlkQZUlsGMZCmL9Czd8ghcL31PfV6Tr3vcfMyKlPnXn3vXPOPefccyeZru4lWiltiRZLXAej4Ao8E9FHmuVgBVzSSScRvQJWQfK3DtqBFGjLY0SelcAhSIUZsaQLnIBJ9awOatQHQIZ6AfSAGaYvcgcSzaljXKQIcqTorI3zm1SUA9n2gaeAnx49EPlm302n62AdzDbQlQUW3nQwBtaa0PobYNgq8rLa3hPb812t15R+x1oE0gHKoJ82lkDVdTCo9AdwHBJlnWiZogOR7J+NCr2DR9U9EsGckaIg6gzPgk5RVv2+txxssziSwz5wZHRIkLYhY1238I6VogrbtFGRQ3jrq0E5JLI4squjtxzI9hbARUS9uo31M7D4bSJ6brQ0ONcHxhl2UoNetXYNpsFL3GkqL05wLuVU52SMd2XqzoO3n94HryDPo28Ntw82Rd5nPM5BEyOb6gYLrswKn5U8ziNT5MoN+X//Kr4EGABC81BECh0XWQAAAABJRU5ErkJggg=="></span> <span class="lableText">健康</span></div> <div class="fr"><span class="auther"></span> <span class="time">2018年10月24日 </span></div></div> <p class="lead">长假即将结束，唤醒身体最有效的运动</p> <div class="backicon" style="background-image: url(&quot;https://ifxj-upload.oss-cn-shenzhen.aliyuncs.com/spider/8654e0ca508bd98829751a9a9f1695db.jpeg&quot;); background-repeat: no-repeat; background-position: center center;"></div></div><div class="textbox"><div class="lable clear"><div class="fl"><span class="lableIcon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MDY0NjU1MzBCMDE2MTFFOEFERkJBQTNBNTBFQjA5OUUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6Mjk5MkRFRTZCMDE2MTFFOEFERkJBQTNBNTBFQjA5OUUiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDowNjQ2NTUyRUIwMTYxMUU4QURGQkFBM0E1MEVCMDk5RSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDowNjQ2NTUyRkIwMTYxMUU4QURGQkFBM0E1MEVCMDk5RSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PnmCj2EAAAGXSURBVHjazJbPK0RRFMdnxCyG7CxsJv4KmmwIhbJRozFlYW9Nk59jiv/AQlkQZUlsGMZCmL9Czd8ghcL31PfV6Tr3vcfMyKlPnXn3vXPOPefccyeZru4lWiltiRZLXAej4Ao8E9FHmuVgBVzSSScRvQJWQfK3DtqBFGjLY0SelcAhSIUZsaQLnIBJ9awOatQHQIZ6AfSAGaYvcgcSzaljXKQIcqTorI3zm1SUA9n2gaeAnx49EPlm302n62AdzDbQlQUW3nQwBtaa0PobYNgq8rLa3hPb812t15R+x1oE0gHKoJ82lkDVdTCo9AdwHBJlnWiZogOR7J+NCr2DR9U9EsGckaIg6gzPgk5RVv2+txxssziSwz5wZHRIkLYhY1238I6VogrbtFGRQ3jrq0E5JLI4squjtxzI9hbARUS9uo31M7D4bSJ6brQ0ONcHxhl2UoNetXYNpsFL3GkqL05wLuVU52SMd2XqzoO3n94HryDPo28Ntw82Rd5nPM5BEyOb6gYLrswKn5U8ziNT5MoN+X//Kr4EGABC81BECh0XWQAAAABJRU5ErkJggg=="></span> <span class="lableText">健康</span></div> <div class="fr"><span class="auther"></span> <span class="time">2018年10月24日 </span></div></div> <p class="lead">十一长假，美食健康两不误的节日饮食指南</p> <div class="backicon" style="background-image: url(&quot;https://ifxj-upload.oss-cn-shenzhen.aliyuncs.com/spider/36b97d6cbf28fce01585a349edeac9d6.jpeg&quot;); background-repeat: no-repeat; background-position: center center;"></div></div></div> <div class="healthNews"><div class="title">
+                    健康新闻
+                </div> <div class="textbox"><div class="lable clear"><div class="fl"><span class="lableIcon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MDY0NjU1MzBCMDE2MTFFOEFERkJBQTNBNTBFQjA5OUUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6Mjk5MkRFRTZCMDE2MTFFOEFERkJBQTNBNTBFQjA5OUUiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDowNjQ2NTUyRUIwMTYxMUU4QURGQkFBM0E1MEVCMDk5RSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDowNjQ2NTUyRkIwMTYxMUU4QURGQkFBM0E1MEVCMDk5RSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PnmCj2EAAAGXSURBVHjazJbPK0RRFMdnxCyG7CxsJv4KmmwIhbJRozFlYW9Nk59jiv/AQlkQZUlsGMZCmL9Czd8ghcL31PfV6Tr3vcfMyKlPnXn3vXPOPefccyeZru4lWiltiRZLXAej4Ao8E9FHmuVgBVzSSScRvQJWQfK3DtqBFGjLY0SelcAhSIUZsaQLnIBJ9awOatQHQIZ6AfSAGaYvcgcSzaljXKQIcqTorI3zm1SUA9n2gaeAnx49EPlm302n62AdzDbQlQUW3nQwBtaa0PobYNgq8rLa3hPb812t15R+x1oE0gHKoJ82lkDVdTCo9AdwHBJlnWiZogOR7J+NCr2DR9U9EsGckaIg6gzPgk5RVv2+txxssziSwz5wZHRIkLYhY1238I6VogrbtFGRQ3jrq0E5JLI4squjtxzI9hbARUS9uo31M7D4bSJ6brQ0ONcHxhl2UoNetXYNpsFL3GkqL05wLuVU52SMd2XqzoO3n94HryDPo28Ntw82Rd5nPM5BEyOb6gYLrswKn5U8ziNT5MoN+X//Kr4EGABC81BECh0XWQAAAABJRU5ErkJggg=="></span> <span class="lableText">健康</span></div> <div class="fr"><span class="auther"></span> <span class="time">2018年10月25日 </span></div></div> <p class="lead">布局处方药，药店准备好了吗？</p> <div class="backicon" style="background-image: url(&quot;https://ifxj-upload.oss-cn-shenzhen.aliyuncs.com/spider/fd0cdc8616064337d4565e3b06318e59.jpg&quot;); background-repeat: no-repeat; background-position: center center;"></div></div><div class="textbox"><div class="lable clear"><div class="fl"><span class="lableIcon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MDY0NjU1MzBCMDE2MTFFOEFERkJBQTNBNTBFQjA5OUUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6Mjk5MkRFRTZCMDE2MTFFOEFERkJBQTNBNTBFQjA5OUUiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDowNjQ2NTUyRUIwMTYxMUU4QURGQkFBM0E1MEVCMDk5RSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDowNjQ2NTUyRkIwMTYxMUU4QURGQkFBM0E1MEVCMDk5RSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PnmCj2EAAAGXSURBVHjazJbPK0RRFMdnxCyG7CxsJv4KmmwIhbJRozFlYW9Nk59jiv/AQlkQZUlsGMZCmL9Czd8ghcL31PfV6Tr3vcfMyKlPnXn3vXPOPefccyeZru4lWiltiRZLXAej4Ao8E9FHmuVgBVzSSScRvQJWQfK3DtqBFGjLY0SelcAhSIUZsaQLnIBJ9awOatQHQIZ6AfSAGaYvcgcSzaljXKQIcqTorI3zm1SUA9n2gaeAnx49EPlm302n62AdzDbQlQUW3nQwBtaa0PobYNgq8rLa3hPb812t15R+x1oE0gHKoJ82lkDVdTCo9AdwHBJlnWiZogOR7J+NCr2DR9U9EsGckaIg6gzPgk5RVv2+txxssziSwz5wZHRIkLYhY1238I6VogrbtFGRQ3jrq0E5JLI4squjtxzI9hbARUS9uo31M7D4bSJ6brQ0ONcHxhl2UoNetXYNpsFL3GkqL05wLuVU52SMd2XqzoO3n94HryDPo28Ntw82Rd5nPM5BEyOb6gYLrswKn5U8ziNT5MoN+X//Kr4EGABC81BECh0XWQAAAABJRU5ErkJggg=="></span> <span class="lableText">健康</span></div> <div class="fr"><span class="auther"></span> <span class="time">2018年10月25日 </span></div></div> <p class="lead">医疗物联网的应用与趋势</p> <div class="backicon" style="background-image: url(&quot;https://ifxj-upload.oss-cn-shenzhen.aliyuncs.com/spider/c02e07acafa8739902318ad899e2830e.jpg&quot;); background-repeat: no-repeat; background-position: center center;"></div></div></div></div></div> <div class="moreNews"><div class="moreNewstitle">
+            更多优选
+        </div> <div class="accessory-list-wrap"><div class="accessory-list col-4"><ul><div class="healthnewsContent"><div class="newsLeft" style="background-image: url(&quot;https://ifxj-upload.oss-cn-shenzhen.aliyuncs.com/spider/b1f535741ee58e0793b8e1919592f3f2.jpeg&quot;); background-repeat: no-repeat; background-position: center center;"><div class="lable fl"><span class="lableIcon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RDRGRTlENDdCMDE1MTFFOEFERkJBQTNBNTBFQjA5OUUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RDRGRTlENDhCMDE1MTFFOEFERkJBQTNBNTBFQjA5OUUiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpENEZFOUQ0NUIwMTUxMUU4QURGQkFBM0E1MEVCMDk5RSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpENEZFOUQ0NkIwMTUxMUU4QURGQkFBM0E1MEVCMDk5RSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Prk0cXoAAAGGSURBVHja1Na7SgNBFIDhrEqCWGgUhIgI2mgKW1FsFMQmXkB7G30CxcLeJiQ+gHjBMgg2YkQtbKzjtbATQVEIXlAjKoLrv3iEYcnsZlZSOPDB7swkZ3Lm7Gws27ZD5WwVoTI3kwBRzKHSKIKTIh8d2MCb/dNe5T5ewmd9A/SgYBdvTn//XwLU48b2bneIegXw2oNJxHwy3ICpIHuwhA9lpb04k+tZLCpjzrxl0xQ9ulJxjE+5vkTeNf5gmqIx5JT7AhaQRAY1ypgzbzxImQ4pKzxBnfQnXKsfDlpFFnaUL3rGOb6Uvl2ZZxygGmnEkNWU6DaakERYF6BKk7lRzGAQCcQxgkbksYl77KMdR7I3Je9BSlnpFTpdqZvGuzInZVpFapU04wADcp+Riopo5gc6TWuRxQTmcf3X4/qpSF8Ya7IX3ThVxl50AXSbfKjpt+QXtKAP65K6nOmDFsGFz0m6JSdpWsra+EHrkjPGq+0FfdB+tWG1yHvhFito9XvhWP/+X8W3AAMAwnTelIwRreUAAAAASUVORK5CYII="></span> <span class="lableText">育儿</span></div></div> <div class="newsRight mobile-hidden"><div class="rightTop"><p class="lead">鹅蛋吃到吐，湿疹还是有！“去胎毒”的偏方到底靠不靠谱？</p> <p class="topText">仔细想想，你身边是不是有人在孕期就开始吃各种莫名其妙的食物？今天鹅蛋、明天绿豆的，问起来就说是在预防胎毒。等生完孩子，又会出现这样一批有苦说不出的新手妈妈：因为孩子身上出现一些很常见的小问题，就被...</p></div> <div class="newsTime">2018年10月25日 </div></div> <div class="newsRightmobile pc-hidden"><div class="rightTop"><p class="lead">鹅蛋吃到吐，湿疹还是有！“去胎毒”的偏方到底靠不靠谱？</p> <div class="newsTime">2018年10月25日 </div> <p class="topText">仔细想想，你身边是不是有人在孕期就开始吃各种莫名其妙的食物？今天鹅蛋、明天绿豆的，问起来就说是在预防胎毒。等生完孩子，又会出现这样一批有苦说不出的新手妈妈：因为孩子身上出现一些很常见的小问题，就被...</p></div></div></div><div class="healthnewsContent"><div class="newsLeft" style="background-image: url(&quot;https://ifxj-upload.oss-cn-shenzhen.aliyuncs.com/spider/51028210226a863b3006ca7ac2da4736.jpeg&quot;); background-repeat: no-repeat; background-position: center center;"><div class="lable fl"><span class="lableIcon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RDRGRTlENDdCMDE1MTFFOEFERkJBQTNBNTBFQjA5OUUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RDRGRTlENDhCMDE1MTFFOEFERkJBQTNBNTBFQjA5OUUiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpENEZFOUQ0NUIwMTUxMUU4QURGQkFBM0E1MEVCMDk5RSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpENEZFOUQ0NkIwMTUxMUU4QURGQkFBM0E1MEVCMDk5RSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Prk0cXoAAAGGSURBVHja1Na7SgNBFIDhrEqCWGgUhIgI2mgKW1FsFMQmXkB7G30CxcLeJiQ+gHjBMgg2YkQtbKzjtbATQVEIXlAjKoLrv3iEYcnsZlZSOPDB7swkZ3Lm7Gws27ZD5WwVoTI3kwBRzKHSKIKTIh8d2MCb/dNe5T5ewmd9A/SgYBdvTn//XwLU48b2bneIegXw2oNJxHwy3ICpIHuwhA9lpb04k+tZLCpjzrxl0xQ9ulJxjE+5vkTeNf5gmqIx5JT7AhaQRAY1ypgzbzxImQ4pKzxBnfQnXKsfDlpFFnaUL3rGOb6Uvl2ZZxygGmnEkNWU6DaakERYF6BKk7lRzGAQCcQxgkbksYl77KMdR7I3Je9BSlnpFTpdqZvGuzInZVpFapU04wADcp+Riopo5gc6TWuRxQTmcf3X4/qpSF8Ya7IX3ThVxl50AXSbfKjpt+QXtKAP65K6nOmDFsGFz0m6JSdpWsra+EHrkjPGq+0FfdB+tWG1yHvhFito9XvhWP/+X8W3AAMAwnTelIwRreUAAAAASUVORK5CYII="></span> <span class="lableText">育儿</span></div></div> <div class="newsRight mobile-hidden"><div class="rightTop"><p class="lead">尬skr人！ 产后第一啪竟然是这样的……</p> <p class="topText">经历了漫长的孕期，宝宝终于呱呱坠地了，为了宝宝素食了N久的宝爸宝妈们也开始蠢蠢欲动了。孕期隐忍多时，本以为生完孩子后可以彻底疯狂一下，可是据说产后第一次同房很少有顺利的，让众多宝妈宝爸也是苦恼不已...</p></div> <div class="newsTime">2018年10月25日 </div></div> <div class="newsRightmobile pc-hidden"><div class="rightTop"><p class="lead">尬skr人！ 产后第一啪竟然是这样的……</p> <div class="newsTime">2018年10月25日 </div> <p class="topText">经历了漫长的孕期，宝宝终于呱呱坠地了，为了宝宝素食了N久的宝爸宝妈们也开始蠢蠢欲动了。孕期隐忍多时，本以为生完孩子后可以彻底疯狂一下，可是据说产后第一次同房很少有顺利的，让众多宝妈宝爸也是苦恼不已...</p></div></div></div><div class="healthnewsContent"><div class="newsLeft" style="background-image: url(&quot;https://ifxj-upload.oss-cn-shenzhen.aliyuncs.com/spider/64fc804ea094c56955b0c618fec027a0.jpeg&quot;); background-repeat: no-repeat; background-position: center center;"><div class="lable fl"><span class="lableIcon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RDRGRTlENDdCMDE1MTFFOEFERkJBQTNBNTBFQjA5OUUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RDRGRTlENDhCMDE1MTFFOEFERkJBQTNBNTBFQjA5OUUiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpENEZFOUQ0NUIwMTUxMUU4QURGQkFBM0E1MEVCMDk5RSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpENEZFOUQ0NkIwMTUxMUU4QURGQkFBM0E1MEVCMDk5RSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Prk0cXoAAAGGSURBVHja1Na7SgNBFIDhrEqCWGgUhIgI2mgKW1FsFMQmXkB7G30CxcLeJiQ+gHjBMgg2YkQtbKzjtbATQVEIXlAjKoLrv3iEYcnsZlZSOPDB7swkZ3Lm7Gws27ZD5WwVoTI3kwBRzKHSKIKTIh8d2MCb/dNe5T5ewmd9A/SgYBdvTn//XwLU48b2bneIegXw2oNJxHwy3ICpIHuwhA9lpb04k+tZLCpjzrxl0xQ9ulJxjE+5vkTeNf5gmqIx5JT7AhaQRAY1ypgzbzxImQ4pKzxBnfQnXKsfDlpFFnaUL3rGOb6Uvl2ZZxygGmnEkNWU6DaakERYF6BKk7lRzGAQCcQxgkbksYl77KMdR7I3Je9BSlnpFTpdqZvGuzInZVpFapU04wADcp+Riopo5gc6TWuRxQTmcf3X4/qpSF8Ya7IX3ThVxl50AXSbfKjpt+QXtKAP65K6nOmDFsGFz0m6JSdpWsra+EHrkjPGq+0FfdB+tWG1yHvhFito9XvhWP/+X8W3AAMAwnTelIwRreUAAAAASUVORK5CYII="></span> <span class="lableText">育儿</span></div></div> <div class="newsRight mobile-hidden"><div class="rightTop"><p class="lead">因为一颗牙引产近7个月的胎儿！孕期口腔健康非常重要</p> <p class="topText">很多人这辈子至少会被智齿折磨上一次随便发个炎，就会折磨得让人吃不好饭睡不好觉，疼的要命这还是普通人遇上智齿的情况然而当智齿与孕妇不期而遇后果可不是这么简单近日，有报纸报道：一位26岁的孕妇因为一颗牙...</p></div> <div class="newsTime">2018年10月25日 </div></div> <div class="newsRightmobile pc-hidden"><div class="rightTop"><p class="lead">因为一颗牙引产近7个月的胎儿！孕期口腔健康非常重要</p> <div class="newsTime">2018年10月25日 </div> <p class="topText">很多人这辈子至少会被智齿折磨上一次随便发个炎，就会折磨得让人吃不好饭睡不好觉，疼的要命这还是普通人遇上智齿的情况然而当智齿与孕妇不期而遇后果可不是这么简单近日，有报纸报道：一位26岁的孕妇因为一颗牙...</p></div></div></div><div class="healthnewsContent"><div class="newsLeft" style="background-image: url(&quot;https://ifxj-upload.oss-cn-shenzhen.aliyuncs.com/spider/1bb309e6929d3b3c0c954488a7882a01.jpeg&quot;); background-repeat: no-repeat; background-position: center center;"><div class="lable fl"><span class="lableIcon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RDRGRTlENDdCMDE1MTFFOEFERkJBQTNBNTBFQjA5OUUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RDRGRTlENDhCMDE1MTFFOEFERkJBQTNBNTBFQjA5OUUiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpENEZFOUQ0NUIwMTUxMUU4QURGQkFBM0E1MEVCMDk5RSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpENEZFOUQ0NkIwMTUxMUU4QURGQkFBM0E1MEVCMDk5RSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Prk0cXoAAAGGSURBVHja1Na7SgNBFIDhrEqCWGgUhIgI2mgKW1FsFMQmXkB7G30CxcLeJiQ+gHjBMgg2YkQtbKzjtbATQVEIXlAjKoLrv3iEYcnsZlZSOPDB7swkZ3Lm7Gws27ZD5WwVoTI3kwBRzKHSKIKTIh8d2MCb/dNe5T5ewmd9A/SgYBdvTn//XwLU48b2bneIegXw2oNJxHwy3ICpIHuwhA9lpb04k+tZLCpjzrxl0xQ9ulJxjE+5vkTeNf5gmqIx5JT7AhaQRAY1ypgzbzxImQ4pKzxBnfQnXKsfDlpFFnaUL3rGOb6Uvl2ZZxygGmnEkNWU6DaakERYF6BKk7lRzGAQCcQxgkbksYl77KMdR7I3Je9BSlnpFTpdqZvGuzInZVpFapU04wADcp+Riopo5gc6TWuRxQTmcf3X4/qpSF8Ya7IX3ThVxl50AXSbfKjpt+QXtKAP65K6nOmDFsGFz0m6JSdpWsra+EHrkjPGq+0FfdB+tWG1yHvhFito9XvhWP/+X8W3AAMAwnTelIwRreUAAAAASUVORK5CYII="></span> <span class="lableText">育儿</span></div></div> <div class="newsRight mobile-hidden"><div class="rightTop"><p class="lead">孕妈食欲差吃不下，弄清这三点，不用担心胎宝宝挨饿</p> <p class="topText">怀孕期间孕妈和身边的家人们最关心哪个问题呢？看了一些后台孕妈们踊跃的提问，不论是问关于胎宝宝还是孕妈自己，基本上本质都是在问同一个问题，就是孕妈到底应该怎么吃。有人问我小编期不爱吃肉会不会有什么影...</p></div> <div class="newsTime">2018年10月25日 </div></div> <div class="newsRightmobile pc-hidden"><div class="rightTop"><p class="lead">孕妈食欲差吃不下，弄清这三点，不用担心胎宝宝挨饿</p> <div class="newsTime">2018年10月25日 </div> <p class="topText">怀孕期间孕妈和身边的家人们最关心哪个问题呢？看了一些后台孕妈们踊跃的提问，不论是问关于胎宝宝还是孕妈自己，基本上本质都是在问同一个问题，就是孕妈到底应该怎么吃。有人问我小编期不爱吃肉会不会有什么影...</p></div></div></div><div class="healthnewsContent"><div class="newsLeft" style="background-image: url(&quot;https://ifxj-upload.oss-cn-shenzhen.aliyuncs.com/spider/449a32a4b6caa743f57f2cd75e5fa0d3.jpeg&quot;); background-repeat: no-repeat; background-position: center center;"><div class="lable fl"><span class="lableIcon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RDRGRTlENDdCMDE1MTFFOEFERkJBQTNBNTBFQjA5OUUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RDRGRTlENDhCMDE1MTFFOEFERkJBQTNBNTBFQjA5OUUiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpENEZFOUQ0NUIwMTUxMUU4QURGQkFBM0E1MEVCMDk5RSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpENEZFOUQ0NkIwMTUxMUU4QURGQkFBM0E1MEVCMDk5RSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Prk0cXoAAAGGSURBVHja1Na7SgNBFIDhrEqCWGgUhIgI2mgKW1FsFMQmXkB7G30CxcLeJiQ+gHjBMgg2YkQtbKzjtbATQVEIXlAjKoLrv3iEYcnsZlZSOPDB7swkZ3Lm7Gws27ZD5WwVoTI3kwBRzKHSKIKTIh8d2MCb/dNe5T5ewmd9A/SgYBdvTn//XwLU48b2bneIegXw2oNJxHwy3ICpIHuwhA9lpb04k+tZLCpjzrxl0xQ9ulJxjE+5vkTeNf5gmqIx5JT7AhaQRAY1ypgzbzxImQ4pKzxBnfQnXKsfDlpFFnaUL3rGOb6Uvl2ZZxygGmnEkNWU6DaakERYF6BKk7lRzGAQCcQxgkbksYl77KMdR7I3Je9BSlnpFTpdqZvGuzInZVpFapU04wADcp+Riopo5gc6TWuRxQTmcf3X4/qpSF8Ya7IX3ThVxl50AXSbfKjpt+QXtKAP65K6nOmDFsGFz0m6JSdpWsra+EHrkjPGq+0FfdB+tWG1yHvhFito9XvhWP/+X8W3AAMAwnTelIwRreUAAAAASUVORK5CYII="></span> <span class="lableText">育儿</span></div></div> <div class="newsRight mobile-hidden"><div class="rightTop"><p class="lead">一个男人嚎啕大哭：《妈妈的空位》我该怎么填补</p> <p class="topText">当我们把孩子带到这个世界上，就意味着承担了极大的责任。他的妻子因为意外事故离开他身边已经四年了，他因为无法兼顾父母双亲的角色而感到挫折。有一天晚上回到家，他只是很简短地和孩子打个招呼，就因为身体疲...</p></div> <div class="newsTime">2018年10月25日 </div></div> <div class="newsRightmobile pc-hidden"><div class="rightTop"><p class="lead">一个男人嚎啕大哭：《妈妈的空位》我该怎么填补</p> <div class="newsTime">2018年10月25日 </div> <p class="topText">当我们把孩子带到这个世界上，就意味着承担了极大的责任。他的妻子因为意外事故离开他身边已经四年了，他因为无法兼顾父母双亲的角色而感到挫折。有一天晚上回到家，他只是很简短地和孩子打个招呼，就因为身体疲...</p></div></div></div><div class="healthnewsContent"><div class="newsLeft" style="background-image: url(&quot;https://ifxj-upload.oss-cn-shenzhen.aliyuncs.com/spider/58d9a46f09349fbd0e3826cb4da8b6ba.jpeg&quot;); background-repeat: no-repeat; background-position: center center;"><div class="lable fl"><span class="lableIcon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MDk5MzRCMzdBRkZGMTFFOEFERkJBQTNBNTBFQjA5OUUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MDk5MzRCMzhBRkZGMTFFOEFERkJBQTNBNTBFQjA5OUUiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDowOTkzNEIzNUFGRkYxMUU4QURGQkFBM0E1MEVCMDk5RSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDowOTkzNEIzNkFGRkYxMUU4QURGQkFBM0E1MEVCMDk5RSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PtH9MUMAAAEXSURBVHjaYvz//z8DLQHjkLeAAWQBEr4GxB+B+A0QnwDiViDWQFMDw0xAHAnEa4D4ARD/BuLvQHwPWR26pj//McFfIJ4BxBxI6viB+PB/7OA3Pgue/ccN9gMxK1TdOjzqHuCzYMd//KAGiD0IqFmGz4JkAppfAfFxPPL/gNgKnwWgILj6n3zQiJ4YsKUOFSB+QqLBd4A4BltqY8CRBEWAeAXUy+hgOxDbAHEgND5UcZgBxoQymhYQxwCxMRDzAzEfEJ8H4mha5eRMILahlgWzgDgETYwdiFmA+CsW9SCLr6ELsuCxnBuIBXHIsWERY8amkImBxmDUAoos+EyiWV+IqXCQsToQXyaimPgGxP3k5uTRSp8BIMAAZBocyV2Q3ssAAAAASUVORK5CYII="></span> <span class="lableText">养生</span></div></div> <div class="newsRight mobile-hidden"><div class="rightTop"><p class="lead">防止乳腺癌复发，这件事至少坚持5年！</p> <p class="topText">许多乳腺癌患者以为把肿瘤切除，就是治疗的终点，还有些患者在治疗2~3年后，就掉以轻心，不再严格遵循医嘱按时服药，甚至擅自停药......对于大部分患者而言，乳腺癌的康复是一段「长征」，而这段「长征」之路应...</p></div> <div class="newsTime">2018年10月25日 </div></div> <div class="newsRightmobile pc-hidden"><div class="rightTop"><p class="lead">防止乳腺癌复发，这件事至少坚持5年！</p> <div class="newsTime">2018年10月25日 </div> <p class="topText">许多乳腺癌患者以为把肿瘤切除，就是治疗的终点，还有些患者在治疗2~3年后，就掉以轻心，不再严格遵循医嘱按时服药，甚至擅自停药......对于大部分患者而言，乳腺癌的康复是一段「长征」，而这段「长征」之路应...</p></div></div></div><div class="healthnewsContent"><div class="newsLeft" style="background-image: url(&quot;https://ifxj-upload.oss-cn-shenzhen.aliyuncs.com/spider/36ab228a360edb61d490c14582945c1f.jpeg&quot;); background-repeat: no-repeat; background-position: center center;"><div class="lable fl"><span class="lableIcon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MDk5MzRCMzdBRkZGMTFFOEFERkJBQTNBNTBFQjA5OUUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MDk5MzRCMzhBRkZGMTFFOEFERkJBQTNBNTBFQjA5OUUiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDowOTkzNEIzNUFGRkYxMUU4QURGQkFBM0E1MEVCMDk5RSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDowOTkzNEIzNkFGRkYxMUU4QURGQkFBM0E1MEVCMDk5RSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PtH9MUMAAAEXSURBVHjaYvz//z8DLQHjkLeAAWQBEr4GxB+B+A0QnwDiViDWQFMDw0xAHAnEa4D4ARD/BuLvQHwPWR26pj//McFfIJ4BxBxI6viB+PB/7OA3Pgue/ccN9gMxK1TdOjzqHuCzYMd//KAGiD0IqFmGz4JkAppfAfFxPPL/gNgKnwWgILj6n3zQiJ4YsKUOFSB+QqLBd4A4BltqY8CRBEWAeAXUy+hgOxDbAHEgND5UcZgBxoQymhYQxwCxMRDzAzEfEJ8H4mha5eRMILahlgWzgDgETYwdiFmA+CsW9SCLr6ELsuCxnBuIBXHIsWERY8amkImBxmDUAoos+EyiWV+IqXCQsToQXyaimPgGxP3k5uTRSp8BIMAAZBocyV2Q3ssAAAAASUVORK5CYII="></span> <span class="lableText">养生</span></div></div> <div class="newsRight mobile-hidden"><div class="rightTop"><p class="lead">它是人类“第二大脑”，这样护理人不老！</p> <p class="topText">专家把肠道比喻成人类的“第二大脑”。大多数人不知道的是，肠道负责“消化”食物、信息、性粉刺及声音和颜色，就像一把钥匙能够调节人的焦虑和紧张情绪。控制人类情感的五羟色胺、多巴胺以及多种让人情绪愉快的...</p></div> <div class="newsTime">2018年10月25日 </div></div> <div class="newsRightmobile pc-hidden"><div class="rightTop"><p class="lead">它是人类“第二大脑”，这样护理人不老！</p> <div class="newsTime">2018年10月25日 </div> <p class="topText">专家把肠道比喻成人类的“第二大脑”。大多数人不知道的是，肠道负责“消化”食物、信息、性粉刺及声音和颜色，就像一把钥匙能够调节人的焦虑和紧张情绪。控制人类情感的五羟色胺、多巴胺以及多种让人情绪愉快的...</p></div></div></div><div class="healthnewsContent"><div class="newsLeft" style="background-image: url(&quot;https://ifxj-upload.oss-cn-shenzhen.aliyuncs.com/spider/eba09206f45a3656d9055b16a9c143db.jpeg&quot;); background-repeat: no-repeat; background-position: center center;"><div class="lable fl"><span class="lableIcon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RDRGRTlENDdCMDE1MTFFOEFERkJBQTNBNTBFQjA5OUUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RDRGRTlENDhCMDE1MTFFOEFERkJBQTNBNTBFQjA5OUUiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpENEZFOUQ0NUIwMTUxMUU4QURGQkFBM0E1MEVCMDk5RSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpENEZFOUQ0NkIwMTUxMUU4QURGQkFBM0E1MEVCMDk5RSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Prk0cXoAAAGGSURBVHja1Na7SgNBFIDhrEqCWGgUhIgI2mgKW1FsFMQmXkB7G30CxcLeJiQ+gHjBMgg2YkQtbKzjtbATQVEIXlAjKoLrv3iEYcnsZlZSOPDB7swkZ3Lm7Gws27ZD5WwVoTI3kwBRzKHSKIKTIh8d2MCb/dNe5T5ewmd9A/SgYBdvTn//XwLU48b2bneIegXw2oNJxHwy3ICpIHuwhA9lpb04k+tZLCpjzrxl0xQ9ulJxjE+5vkTeNf5gmqIx5JT7AhaQRAY1ypgzbzxImQ4pKzxBnfQnXKsfDlpFFnaUL3rGOb6Uvl2ZZxygGmnEkNWU6DaakERYF6BKk7lRzGAQCcQxgkbksYl77KMdR7I3Je9BSlnpFTpdqZvGuzInZVpFapU04wADcp+Riopo5gc6TWuRxQTmcf3X4/qpSF8Ya7IX3ThVxl50AXSbfKjpt+QXtKAP65K6nOmDFsGFz0m6JSdpWsra+EHrkjPGq+0FfdB+tWG1yHvhFito9XvhWP/+X8W3AAMAwnTelIwRreUAAAAASUVORK5CYII="></span> <span class="lableText">育儿</span></div></div> <div class="newsRight mobile-hidden"><div class="rightTop"><p class="lead">教育孩子，拼的就是父母！学会这17条，孩子就赢了一半！</p> <p class="topText">：忙碌的工作经常会使父母疏于孩子的家庭教育，很多父母也知道这样带来的危害，但仍然用一句话“我工作忙呀”来躲避这个问题！所以，如何如何利用碎片化的时间来教育孩子成为了现代家庭教育需要考虑的问题！忙碌...</p></div> <div class="newsTime">2018年10月25日 </div></div> <div class="newsRightmobile pc-hidden"><div class="rightTop"><p class="lead">教育孩子，拼的就是父母！学会这17条，孩子就赢了一半！</p> <div class="newsTime">2018年10月25日 </div> <p class="topText">：忙碌的工作经常会使父母疏于孩子的家庭教育，很多父母也知道这样带来的危害，但仍然用一句话“我工作忙呀”来躲避这个问题！所以，如何如何利用碎片化的时间来教育孩子成为了现代家庭教育需要考虑的问题！忙碌...</p></div></div></div> <div infinite-scroll-disabled="busy" infinite-scroll-distance="10" style="text-align: center;"><img src="data:image/gif;base64,R0lGODlhZAAUAKUkAJCapZCbpZGbppOdp5agqpahqZqjrZ2nr6GqsqOstaSttaiwuKqzuq62vrC4vrK6wLa9w7zDycDGzMbM0crP08rP1M3S1s7T19HV2dLW2tTY3Njb39/i5ODj5eLl5+Ll6Obo6unr7ers7uzv8P///////////////////////////////////////////////////////////////////////////////////////////////////////////////yH/C05FVFNDQVBFMi4wAwEAAAAh+QQJDQA/ACwAAAAAZAAUAAAG4cCfcEgsGo/IpHLJbDqf0Kh0Sq1ar9isdsvter9MkMcDLns9h4DaoDG7rxy1XG05jj4i5T2f3C/9fXh6gk4Gc3IDRhdyEUiLao1HjwGRkoyOl5aQTXGHcnVDI4cdRqJzpEWmcqipo6WuradMGJ5yE0QZh7dFuXO7uLpHvbZGw2q/Q8YByEgbtWoURB+HF0bTc9VF13LZ2tTW397YTQPPIUUNcgpI6WrrR+0B7/Dq7PX07k4TtRDCExVKMvwLOJAgwCQCDyJJCEXCoQdvIlYZMaEiCIkYM2rcyLGjx48gQz4JAgAh+QQJDQA/ACwAAAAAZAAUAAAG+sCfcEgsGo/IpHLJbDqf0Kh0Sq1ar9isdsvter9ZkMcDLk9HnhDScwi4DRqznAlxBxajIsfOtxxHHyJKgIKDgYaFSIRQD3wBCEUGjm4DRhd2EUiXbpmamJ6coAGdTCCTAXFCe6cBfkMjjh1GsHyys7G3tbl2tksYpxNDv6zBQxmOxUTHfMnKyEbLds1C0W7TSKuOFEMbrAHbQx+OF0bifOTl4+nn63boTG18A3lDA6xqRA12Ckj6bvz99gX8NzAAwCYeCNgZkGrIhFMQjmSYUEHJxIoWKWbEiOSilAkg6RWR4OjBnJNVRoCcAAKly5cwY8qcSbOmzZtCggAAIfkECQ0APwAsAAAAAGQAFAAABv7An3BILBqPyKRyyWw6n9CodEqtWq/YrHbL7Xq/YCPI4wmboyNPCOk5BN4Gzdk8+oiSkHdgMSpy9IAWR3V3SoSGdoiFTxd6EUcPgAEIRQaSbwNGjW+PSJsBnZqOnqNOI5IdRSCXAXJCf6wBgkOngKlGtXq3RLlvu7SoThmSE0UYrMVCx7HJQsOAzUTP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" style="height: 20px; width: 100px; margin-top: 20px;"></div></ul></div></div></div> <div class="codeBox mobile-hidden"><!----> <!----> <div><div class="emailInfo"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6Njg0Q0NBMDRDQjUwMTFFOEE2Qzk4Q0IzODY1RTUxQUQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6Njg0Q0NBMDVDQjUwMTFFOEE2Qzk4Q0IzODY1RTUxQUQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo2ODRDQ0EwMkNCNTAxMUU4QTZDOThDQjM4NjVFNTFBRCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo2ODRDQ0EwM0NCNTAxMUU4QTZDOThDQjM4NjVFNTFBRCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PtlsrUcAAAE5SURBVHjaYvz//z8DLQATA43A0DOYBUqLAHELEGtQaN4FIG4A4g8MoMgD4uNA7A7E6/+TD5YCsS8Q7waZCQsKSSDeDMQ7gbgOiElJKn+BuBCIzwHxBiAWRQ9jViCeDsQKQBwC9g5h8AaIA4DYHIh7UMyDBsUDNG+dBGJ7IL6Cx+unoWouoYlfAOcNHAaDwEsg9gbi1VjkFgCxHxC/wyJ3ATmMsQFeIP4HxOuAuBzK/g3EuUC8G5qiuHDqxuHij0DsDMT7ofyF0Bh3A+I1ULFtQOwJxN+IDYrX0LA7iabhIhDfQBPbB8QuUIfgNfgpENsB8WUS0i/IAY5QB2E1+DEQ22BxFTHgItRBL9AN3gPE1kB8h4KcdxXqsC0gMxmh5bEEEM8BYhkKy4o7QJwOxG8ZRwv6oWswQIABAOCttevM5HZbAAAAAElFTkSuQmCC"> <!----> <p>邮箱</p></div> <div class="emailInfo"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NEU0QkY3RkRDQjUwMTFFOEE2Qzk4Q0IzODY1RTUxQUQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NEU0QkY3RkVDQjUwMTFFOEE2Qzk4Q0IzODY1RTUxQUQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo0RTRCRjdGQkNCNTAxMUU4QTZDOThDQjM4NjVFNTFBRCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo0RTRCRjdGQ0NCNTAxMUU4QTZDOThDQjM4NjVFNTFBRCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pr+YB5cAAAEESURBVHjaYvz//z8DLQATA40AusHmQPweiNsoNhkUFFAsDMRX/yNAB5IcyRiZcwSIe4H4CTUMR+b8hBqGbngLpQb/QTIM2fCjlBp86z8qABm+HYhFKTV4CprBn4GYndwwRk5u00CJBInPAcTC1EhuILwWzdWgoGCmNChAWA6IP6EZPgeIGSk1GIQj/mOCHlINxyXRhcXwRUDMhqSGC4hXAXEjKQaDXLcQi+EngFgFiJmAeAm+HIrPO6BIW4rFcFBGekko+xMKK0YcwfIfR/ZvI9ZgGI6GZhhChr8g1WBYUlyPx/DzQKxLjsEwbATEE4H4NhD/hpaKB4CYH1kd45Cr8wACDAC7zYrQVdkl/AAAAABJRU5ErkJggg=="> <!----> <p>客服</p></div> <p class="emailInfo showTop none" style="height: 59px; line-height: 59px; padding: 0px;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAASCAYAAABB7B6eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RjlEQUYzQTBBNzdFMTFFOEFERkJBQTNBNTBFQjA5OUUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RjlEQUYzQTFBNzdFMTFFOEFERkJBQTNBNTBFQjA5OUUiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpGOURBRjM5RUE3N0UxMUU4QURGQkFBM0E1MEVCMDk5RSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpGOURBRjM5RkE3N0UxMUU4QURGQkFBM0E1MEVCMDk5RSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PlwMvzAAAADbSURBVHja7JRJCsIwGEb/6gGc2jrcwhN4AG/rQrciIojWDs53cO3ChfET/0goMSRo6cbAo5A071FI4wkhpkQ0oGLGrEIFDw9f8A+UG6BnwJImmIAbGIGazT4XeSRe487PpU3ERt4CG5buQR+cbSMu8h0Ieb4HTjy/MkVMch/EijzIrecjdZeAKt9q5JIuOJoin+QJb8oMcl1kDRqmQKDIUwu5pAMOukhenvJLiYNcF4n4aJMqzxS57yiXtPkovyNyQf5E8RdyXWQu76IFqIIhuPzgBgrBGFwfAgwAE/5lzkoNFcoAAAAASUVORK5CYII=" class="shangfan"></p></div></div> <!----></div></div><script type="text/javascript" src="/static/js/manifest.2ae2e69a05c33dfc65f8.js"></script><script type="text/javascript" src="/static/js/vendor.f754cae41c747240972d.js"></script><script type="text/javascript" src="/static/js/app.9541b676c1881719f60b.js"></script><script type="text/javascript">(function() {
+          var bp = document.createElement('script');
+          var curProtocol = window.location.protocol.split(':')[0];
+          if(curProtocol === 'https') {
+              bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+          } else {
+              bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+          }
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(bp, s);
+      })();
+      docElementFontSize = document.documentElement.style.fontSize;
+      //html 最终的 font-size
+      finalDocElementFontSize = window.getComputedStyle(window.document.documentElement).getPropertyValue("font-size");
+      //计算最终html font-size
+      function modifileRootRem () {
+          var root = window.document.documentElement;
+          var fontSize = parseFloat(root.style.fontSize);
+          var finalFontSize = parseFloat(window.getComputedStyle(root).getPropertyValue("font-size"));
+          if(finalFontSize === fontSize) return;
+          root.style.fontSize = fontSize+(fontSize-finalFontSize) + "px";
+      }
+      if(typeof window.onload === 'function'){
+          var oldFun = window.onload;
+          window.onload = function(){
+              oldFun();
+              modifileRootRem();
+          }
+      }else{
+          window.onload = modifileRootRem;
+      }</script><script src="https://cdn.bootcss.com/jquery-infinitescroll/3.0.1/infinite-scroll.pkgd.js"></script></body></html>

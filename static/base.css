@@ -1,0 +1,119 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+html{
+  height: 100%;
+}
+body{
+  /*width: 100%;*/
+  height: 100%;
+  font-family: MicrosoftYaHei;
+}
+ul, li{
+    list-style: none;
+}
+@media screen and (max-width:767px){
+    .mobileone-hidden{
+        display: none!important;
+    }
+}
+@media screen and (min-width:768px){
+    .pcone-hidden{
+        display: none!important;
+    }
+}
+
+@media screen and (max-width:769px){
+    .mobile-hidden{
+        display: none!important;
+    }
+}
+@media screen and (min-width:769px){
+    .pc-hidden{
+        display: none!important;
+    }
+}
+
+.flexBetween{
+  display:-webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+}
+.flexAround{
+  display:-webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-around;
+}
+.clear:after {
+    display: block;
+    clear: both;
+    content: "";
+    visibility: hidden;
+    height: 0
+}
+
+.clear {
+    zoom: 1
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,img {
+  margin: 0;
+  padding: 0
+}
+.border-none{
+	border: 0;
+}
+a:hover {
+  text-decoration: none!important;
+}
+a{
+    text-decoration: none!important;
+}
+input,select{
+  border: none;
+  outline: none;
+  appearance:none;
+  -moz-appearance:none;
+  -webkit-appearance:none;
+  -ms-appearance:none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0)
+}
+input:disabled, textarea:disabled {
+    background-color: #FFFFFF;
+    color: #000;
+}
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:#dcdddd;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:#dcdddd;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:#dcdddd;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:#dcdddd;
+}
+.mint-loadmore-bottom{
+    margin-bottom: -30px!important;
+}
+
+
+.index_8_product .active {
+    display: block
+}
+
